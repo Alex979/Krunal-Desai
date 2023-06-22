@@ -1,0 +1,20 @@
+import './globals.css'
+import { Baskervville } from 'next/font/google'
+
+const baskervville = Baskervville({ subsets: ['latin'], weight: '400' })
+
+export const metadata = {
+  title: 'Krunal Desai - Wildlife Photography',
+}
+
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode
+}) {
+  return (
+    <html lang="en">
+      <body className={baskervville.className}>{children}</body>
+    </html>
+  )
+}
