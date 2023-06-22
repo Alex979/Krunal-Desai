@@ -33,9 +33,7 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="w-full h-screen bg-myrtle">
-        <MapGallery />
-      </div>
+      <MapGallery />
     </main>
   )
 }
