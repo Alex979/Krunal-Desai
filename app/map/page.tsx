@@ -72,6 +72,9 @@ export default function Map() {
 
   const loadMap = (map: mapboxgl.Map) => {
     for (const marker of geojson.features) {
+      if (!marker.properties) {
+        continue;
+      }
       const el = document.createElement("div");
       const root = createRoot(el);
       root.render(<MapMarker thumbnail={marker.properties.thumbnail} />);
