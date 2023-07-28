@@ -1,3 +1,5 @@
+'use client';
+
 import Image from "next/image";
 import lion from "./lion.jpg";
 import rhino from "./rhino.jpg";
@@ -7,12 +9,27 @@ import signature from "./signature.png";
 import scrollIndicator from "./ScrollIndicator.svg";
 import MapGallery from "./MapGallery";
 import { Libre_Baskerville } from "next/font/google";
+import { useEffect } from "react";
 
 const libreBaskerville = Libre_Baskerville({
   subsets: ["latin"],
   weight: ["400", "700"],
 });
 export default function Home() {
+  
+  useEffect(() => {
+    // Handle netlify login
+    if (window.netlifyIdentity) {
+      window.netlifyIdentity.on('init', user => {
+        if (!user && window.netlifyIdentity) {
+          window.netlifyIdentity.on('login', () => {
+            document.location.href = '/admin/';
+          });
+        }
+      });
+    }
+  }, [])
+
   return (
     <main>
       <div className="relative w-full h-screen">
