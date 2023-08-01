@@ -1,14 +1,16 @@
 "use client";
 
-import '@staticcms/core/dist/main.css';
-import config from './config';
-import { useEffect } from 'react';
+import dynamic from "next/dynamic";
+import { useMemo } from "react";
 
 export default function Admin() {
-  useEffect(() => {
-    import('@staticcms/core')
-      .then((CMS: any) => {
-        CMS.default.init({ config });
-      });
-  }, []);
+  const CMSPage = useMemo(
+    () =>
+      dynamic(() => import("./CMSPage"), {
+        ssr: false,
+      }),
+    []
+  );
+
+  return useMemo(() => <CMSPage key="admin" />, [CMSPage]);
 }

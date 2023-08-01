@@ -16,7 +16,6 @@ const libreBaskerville = Libre_Baskerville({
   weight: ["400", "700"],
 });
 export default function Home() {
-  
   useEffect(() => {
     // Handle netlify login
     if (window.netlifyIdentity) {
@@ -28,7 +27,7 @@ export default function Home() {
         }
       });
     }
-  }, [])
+  }, []);
 
   return (
     <main>
@@ -80,10 +79,10 @@ export default function Home() {
           sizes="200vh"
         />
         {/* <div className="absolute inset-0 bg-black bg-opacity-30 pointer-events-none"></div> */}
-        <div className="absolute flex items-center justify-center w-full h-full text-white">
+        <div className="absolute flex items-center w-full h-full text-white">
           <p
             className={
-              "font-bold mx-9 text-center leading-relaxed " +
+              "font-bold mx-9 leading-relaxed lg:w-1/3 " +
               libreBaskerville.className
             }
           >
