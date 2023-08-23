@@ -1,6 +1,7 @@
 import fs from 'fs';
 import Image, { ImageLoader } from 'next/image';
 import path from 'path';
+import Link from 'next/link';
 
 const locationsDir = path.join(process.cwd(), 'data/locations');
 const photosDir = path.join(process.cwd(), 'data/photographs');
@@ -14,24 +15,20 @@ export default async function Gallery({ params }: { params: { slug: string } }) 
   // }
 
   const photos = photosData.map((photo, index) => (
-    <Image key={index} src={photo.image} alt="photo" width={500} height={500} />
+    <div className="w-full aspect-[3/2] relative overflow-hidden">
+      <Link className="hover:opacity-50" href={photo.image}>
+        <Image key={index} src={photo.image} alt="photo" fill style={{objectFit: 'contain'}} />
+      </Link>
+    </div>
   ));
 
   return (
     <main>
       <div className="container mx-auto px-5 sm:px-10 md:px-16 lg:px-24 xl:px-32 pt-32 text-center text-slate-800">
-        <h1 className="text-5xl">{locationData.title}</h1>
+        <h1 className="text-5xl mb-10">{locationData.title}</h1>
         {/* {photos} */}
-        <div className="grid gap-4 grid-cols-3">
-          <div className="bg-red-500 w-full aspect-[3/2]"></div>
-          <div className="bg-red-500 w-full aspect-[3/2]"></div>
-          <div className="bg-red-500 w-full aspect-[3/2]"></div>
-          <div className="bg-red-500 w-full aspect-[3/2]"></div>
-          <div className="bg-red-500 w-full aspect-[3/2]"></div>
-          <div className="bg-red-500 w-full aspect-[3/2]"></div>
-          <div className="bg-red-500 w-full aspect-[3/2]"></div>
-          <div className="bg-red-500 w-full aspect-[3/2]"></div>
-          <div className="bg-red-500 w-full aspect-[3/2]"></div>
+        <div className="grid gap-2 grid-cols-1 md:grid-cols-2 xl:grid-cols-3">
+          {photos}
         </div>
       </div>
     </main>
