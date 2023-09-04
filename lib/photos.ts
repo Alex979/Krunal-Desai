@@ -11,7 +11,12 @@ export interface Photograph {
 const photosDir = path.join(process.cwd(), "data/photographs");
 
 export async function getPhotos(location: string): Promise<Photograph[]> {
-  const fileNames = fs.readdirSync(photosDir);
+  let fileNames: string[] = [];
+  try {
+    fileNames = fs.readdirSync(photosDir);
+  } catch (err) {
+    return [];
+  }
   const photosData = fileNames.reduce((acc: any[], fileName) => {
     const fullPath = path.join(photosDir, fileName);
     const fileContents = fs.readFileSync(fullPath, "utf8");

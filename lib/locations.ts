@@ -22,7 +22,12 @@ export async function getLocation(slug: string): Promise<Location> {
 }
 
 export async function getLocations(): Promise<Location[]> {
-  const fileNames = fs.readdirSync(locationsDir);
+  let fileNames: string[] = [];
+  try {
+    fileNames = fs.readdirSync(locationsDir);
+  } catch (err) {
+    return [];
+  }
   return fileNames
     .filter((it) => it.endsWith(".json"))
     .map((fileName) => {
