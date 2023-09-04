@@ -1,8 +1,8 @@
-import Image, { ImageLoader } from "next/image";
 import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import { getLocation } from "@/lib/locations";
 import { getPhotos } from "@/lib/photos";
+import NetlifyImage from "@/components/NetlifyImage";
 
 export default async function Gallery({
   params,
@@ -15,12 +15,13 @@ export default async function Gallery({
   const photos = photosData.map((photo, index) => (
     <div className="w-full aspect-[3/2] relative overflow-hidden" key={index}>
       <Link className="hover:opacity-50 transition" href={photo.image}>
-        <Image
+        <NetlifyImage
           key={index}
           src={photo.image}
           alt="photo"
           fill
           style={{ objectFit: "contain" }}
+          sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 33vw"
         />
       </Link>
     </div>
