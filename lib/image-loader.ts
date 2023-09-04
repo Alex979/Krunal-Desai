@@ -12,5 +12,8 @@ export default function netlifyImageLoader({
   const baseURL = IS_SERVER
     ? process.env.NEXT_PUBLIC_SITE_URL
     : window.location.origin;
+    if (baseURL === undefined) {
+      throw new Error("baseURL is undefined. Is NEXT_PUBLIC_SITE_URL environmental variable set?");
+    }
   return `${baseURL}/${src}?nf_resize=fit&w=${width}`;
 }
