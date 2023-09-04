@@ -5,7 +5,7 @@ import lion from "./lion.jpg";
 import rhino from "./rhino.jpg";
 import wolf from "./wolf.jpg";
 import fancySeparator from "./FancySeparator.svg";
-import signature from "./signature.png";
+import Navbar from "@/components/Navbar";
 import scrollIndicator from "./ScrollIndicator.svg";
 import MapGallery from "./MapGallery";
 import { Libre_Baskerville } from "next/font/google";
@@ -43,12 +43,7 @@ export default function Home() {
           sizes="200vh"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-black via-transparent to-black opacity-30 pointer-events-none"></div>
-        <div className="absolute w-full h-20 flex">
-          <div className="flex items-center">
-            <Image className="mx-5 w-64" src={signature} alt="signature" />
-          </div>
-          <div className="grow">{/* Put nav links here */}</div>
-        </div>
+        <Navbar theme="light" />
         <div className="absolute flex items-center justify-center w-full h-full text-white">
           <div className="h-1/2 flex flex-col items-center justify-between mt-20">
             <div className="space-y-3 flex flex-col items-center text-shadow-lg text-center">
