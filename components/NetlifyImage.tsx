@@ -12,6 +12,7 @@ interface NetlifyImageProps {
   fill?: boolean | undefined;
   sizes?: string | undefined;
   style?: CSSProperties | undefined;
+  square?: boolean | undefined;
 }
 
 export default function NetlifyImage({
@@ -22,10 +23,11 @@ export default function NetlifyImage({
   fill,
   sizes,
   style,
+  square,
 }: NetlifyImageProps) {
   return (
     <Image
-      loader={netlifyImageLoader}
+      loader={netlifyImageLoader(square)}
       src={src}
       alt={alt}
       width={width}
