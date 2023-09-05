@@ -50,31 +50,6 @@ const config: Config = {
         },
       ],
     },
-    {
-      name: "photographs",
-      label: "Photographs",
-      folder: "data/photographs",
-      create: true,
-      format: "json",
-      identifier_field: "id",
-      fields: [
-        { name: "id", label: "ID", widget: "uuid" },
-        {
-          name: "location",
-          label: "Location",
-          widget: "relation",
-          collection: "locations",
-          search_fields: ["title"],
-          value_field: "{{slug}}",
-          display_fields: ["title"],
-        },
-        {
-          name: "image",
-          label: "Image",
-          widget: "image",
-        },
-      ],
-    },
   ],
 };
 
