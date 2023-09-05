@@ -35,15 +35,15 @@ export async function getLocation(slug: string): Promise<Location> {
     });
     sublocation.locationSlug = location.slug;
     sublocation.coordinates = JSON.parse(sublocation.coordinates);
-    for (const image of sublocation.images) {
-      const absoluteUrl = `${process.env.NEXT_PUBLIC_SITE_URL}${image}`;
-      console.log(absoluteUrl);
-      const buffer = await fetch(absoluteUrl).then(async (res) =>
-        Buffer.from(await res.arrayBuffer())
-      );
-      const { base64 } = await getPlaiceholder(buffer);
-      console.log(base64);
-    }
+    // for (const image of sublocation.images) {
+    //   const absoluteUrl = `${process.env.NEXT_PUBLIC_SITE_URL}${image}`;
+    //   console.log(absoluteUrl);
+    //   const buffer = await fetch(absoluteUrl).then(async (res) =>
+    //     Buffer.from(await res.arrayBuffer())
+    //   );
+    //   const { base64 } = await getPlaiceholder(buffer);
+    //   console.log(base64);
+    // }
     return sublocation;
   }));
   return location;
