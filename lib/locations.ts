@@ -2,6 +2,7 @@ import "server-only";
 import fs from "fs";
 import path from "path";
 import slugify from "slugify";
+import { getPlaiceholder } from "plaiceholder";
 
 export interface Location {
   slug: string;
@@ -25,17 +26,26 @@ export async function getLocation(slug: string): Promise<Location> {
   const fileName = `${slug}.json`;
   const fullPath = path.join(locationsDir, fileName);
   const fileContents = fs.readFileSync(fullPath, "utf8");
-  const location = JSON.parse(fileContents);
+  const location: Location = JSON.parse(fileContents);
   location.slug = slug;
-  location.sublocations = location.sublocations.map((sublocation: any) => {
+  location.sublocations = await Promise.all(location.sublocations.map(async (sublocation: any) => {
     sublocation.slug = slugify(sublocation.title, {
       lower: true,
       strict: true,
     });
     sublocation.locationSlug = location.slug;
     sublocation.coordinates = JSON.parse(sublocation.coordinates);
+    for (const image of sublocation.images) {
+      const absoluteUrl = `${process.env.NEXT_PUBLIC_SITE_URL}${image}`;
+      console.log(absoluteUrl);
+      const buffer = await fetch(absoluteUrl).then(async (res) =>
+        Buffer.from(await res.arrayBuffer())
+      );
+      const { base64 } = await getPlaiceholder(buffer);
+      console.log(base64);
+    }
     return sublocation;
-  });
+  }));
   return location;
 }
 
