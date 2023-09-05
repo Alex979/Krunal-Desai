@@ -40,7 +40,7 @@ export default function Home() {
           style={{ objectFit: "cover" }}
           placeholder="blur"
           priority
-          sizes="200vh"
+          sizes="(max-aspect-ratio: 3/2) 150vh, 100vw"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-black via-transparent to-black opacity-30 pointer-events-none"></div>
         <Navbar theme="light" />
@@ -71,7 +71,7 @@ export default function Home() {
           style={{ objectFit: "cover" }}
           placeholder="blur"
           priority
-          sizes="200vh"
+          sizes="(max-aspect-ratio: 3/2) 150vh, 100vw"
         />
         {/* <div className="absolute inset-0 bg-black bg-opacity-30 pointer-events-none"></div> */}
         <div className="absolute flex items-center w-full h-full text-white">
