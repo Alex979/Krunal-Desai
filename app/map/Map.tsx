@@ -3,7 +3,7 @@
 import "mapbox-gl/dist/mapbox-gl.css";
 import mapboxgl from "mapbox-gl";
 import { useEffect, useRef, useState } from "react";
-import { Location } from "@/lib/locations";
+import { Sublocation } from "@/lib/locations";
 import { createRoot } from "react-dom/client";
 import MapMarker from "./MapMarker";
 
@@ -11,25 +11,25 @@ mapboxgl.accessToken =
   "pk.eyJ1IjoiYWxleDk3OSIsImEiOiJjbGo2bDQ5c2MwZWN3M2VzMWMweXh5MGM2In0.ayglNS9UFxOcFENE_0pFqQ";
 
 interface MapProps {
-  locations: Location[];
+  sublocations: Sublocation[];
 }
 
-export default function Map({ locations }: MapProps) {
+export default function Map({ sublocations }: MapProps) {
   const mapContainerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     if (mapContainerRef.current === null) return;
 
     const loadMap = (map: mapboxgl.Map) => {
-      for (const location of locations) {
+      for (const sublocation of sublocations) {
         const el = document.createElement("div");
         const root = createRoot(el);
-        root.render(<MapMarker location={location} />);
+        root.render(<MapMarker sublocation={sublocation} />);
 
         const mapMarker = new mapboxgl.Marker(el)
           .setLngLat([
-            location.coordinates.coordinates[0],
-            location.coordinates.coordinates[1],
+            sublocation.coordinates.coordinates[0],
+            sublocation.coordinates.coordinates[1],
           ])
           .addTo(map);
 
@@ -49,7 +49,7 @@ export default function Map({ locations }: MapProps) {
     return () => {
       map.remove();
     };
-  }, [locations]);
+  }, [sublocations]);
 
   return <div className="w-full h-full" ref={mapContainerRef}></div>;
 }

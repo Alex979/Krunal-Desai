@@ -1,13 +1,13 @@
-import { getLocations } from "@/lib/locations";
+import { getAllSublocations } from "@/lib/locations";
 import Map from "./Map";
 
 export default async function MapPage() {
-  const locations = await getLocations();
+  const sublocations = await getAllSublocations();
 
   return (
     <main>
       <div className="absolute w-screen h-screen">
-        <Map locations={locations} />
+        <Map sublocations={sublocations} />
       </div>
     </main>
   );

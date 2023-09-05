@@ -20,15 +20,34 @@ const config: Config = {
       fields: [
         { label: "Title", name: "title", widget: "string" },
         {
-          name: "coordinates",
-          label: "Coordinates",
-          widget: "map",
+          name: "thumbnail",
+          label: "Featured Image",
+          widget: "image",
         },
         {
-          name: 'thumbnail',
-          label: 'Featured Image',
-          widget: 'image',
-        }
+          name: "sublocations",
+          label: "Sublocations",
+          widget: "list",
+          fields: [
+            { name: "title", label: "Title", widget: "string" },
+            {
+              name: "coordinates",
+              label: "Coordinates",
+              widget: "map",
+            },
+            {
+              name: "thumbnail",
+              label: "Featured Image",
+              widget: "image",
+            },
+            {
+              name: "images",
+              label: "Images",
+              widget: "image",
+              multiple: true,
+            },
+          ],
+        },
       ],
     },
     {
@@ -37,25 +56,25 @@ const config: Config = {
       folder: "data/photographs",
       create: true,
       format: "json",
-      identifier_field: 'id',
+      identifier_field: "id",
       fields: [
-        { name: 'id', label: 'ID', widget: 'uuid' },
+        { name: "id", label: "ID", widget: "uuid" },
         {
-          name: 'location',
-          label: 'Location',
-          widget: 'relation',
-          collection: 'locations',
-          search_fields: ['title'],
-          value_field: '{{slug}}',
-          display_fields: ['title'],
+          name: "location",
+          label: "Location",
+          widget: "relation",
+          collection: "locations",
+          search_fields: ["title"],
+          value_field: "{{slug}}",
+          display_fields: ["title"],
         },
         {
-          name: 'image',
-          label: 'Image',
-          widget: 'image',
-        }
-      ]
-    }
+          name: "image",
+          label: "Image",
+          widget: "image",
+        },
+      ],
+    },
   ],
 };
 
