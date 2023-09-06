@@ -5,6 +5,9 @@ import { ImageLoaderProps } from "next/image";
 const IS_SERVER = typeof window === "undefined";
 
 export default function netlifyImageLoader(square?: boolean) {
+  if (process.env.NODE_ENV === 'development') {
+    return
+  }
   if (!square) {
     return ({src, width}: ImageLoaderProps) => netlifyImageLoaderInternal(src, width);
   } else {
