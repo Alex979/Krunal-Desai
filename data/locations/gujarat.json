@@ -1,0 +1,66 @@
+{
+  "title": "Gujarat",
+  "sublocations": [
+    {
+      "title": "Gir National Park",
+      "images": [
+        "/uploads/copy-of-asiatic-lion-1.jpg",
+        "/uploads/copy-of-asiatic-lion-2.jpg",
+        "/uploads/copy-of-asiatic-lion-3.jpg",
+        "/uploads/copy-of-asiatic-lion-33.jpg",
+        "/uploads/copy-of-asiatic-lion.jpg"
+      ],
+      "thumbnail": "/uploads/copy-of-asiatic-lion-33.jpg",
+      "coordinates": "{\"type\": \"Point\", \"coordinates\": [70.82415069999999, 21.1243054]}"
+    },
+    {
+      "title": "Little Rann of Kutch",
+      "images": [
+        "/uploads/copy-of-common-crane.jpg",
+        "/uploads/copy-of-ghudkhur-indian-wild-ass-1.jpg",
+        "/uploads/copy-of-ghudkhur-indian-wild-ass.jpg",
+        "/uploads/copy-of-white-footed-fox-1.jpg",
+        "/uploads/copy-of-white-footed-fox.jpg"
+      ],
+      "thumbnail": "/uploads/copy-of-ghudkhur-indian-wild-ass.jpg",
+      "coordinates": "{\"type\": \"Point\", \"coordinates\": [71.2874209, 23.4618205]}"
+    },
+    {
+      "title": "Nal Sarovar Bird Sanctuary",
+      "images": [
+        "/uploads/copy-of-eastern-great-egret.jpg",
+        "/uploads/copy-of-glossy-ibis.jpg",
+        "/uploads/copy-of-grey-heron.jpg",
+        "/uploads/copy-of-grey-headed-swamphen.jpg",
+        "/uploads/copy-of-purple-heron.jpg"
+      ],
+      "thumbnail": "/uploads/copy-of-grey-heron.jpg",
+      "coordinates": "{\"type\": \"Point\", \"coordinates\": [72.0445712, 22.8188399]}"
+    },
+    {
+      "title": "Thol Bird Sanctuary",
+      "images": [
+        "/uploads/copy-of-hanuman-langur-1.jpg",
+        "/uploads/copy-of-hanuman-langur-2.jpg",
+        "/uploads/copy-of-hanuman-langur.jpg",
+        "/uploads/copy-of-painted-stork-1.jpg",
+        "/uploads/copy-of-painted-stork.jpg"
+      ],
+      "thumbnail": "/uploads/copy-of-hanuman-langur-2.jpg",
+      "coordinates": "{\"type\": \"Point\", \"coordinates\": [72.3928391, 23.1401337]}"
+    },
+    {
+      "title": "Velavadar National Park",
+      "images": [
+        "/uploads/copy-of-blackbuck-1.jpg",
+        "/uploads/copy-of-blackbuck.jpg",
+        "/uploads/copy-of-common-crane.jpg",
+        "/uploads/copy-of-indian-wolf.jpg",
+        "/uploads/copy-of-steppe-eagle.jpg"
+      ],
+      "thumbnail": "/uploads/copy-of-blackbuck.jpg",
+      "coordinates": "{\"type\": \"Point\", \"coordinates\": [72.0336732, 22.0540423]}"
+    }
+  ],
+  "thumbnail": "/uploads/copy-of-indian-wolf.jpg"
+}

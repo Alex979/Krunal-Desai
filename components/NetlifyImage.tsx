@@ -13,6 +13,8 @@ interface NetlifyImageProps {
   sizes?: string | undefined;
   style?: CSSProperties | undefined;
   square?: boolean | undefined;
+  priority?: boolean | undefined;
+  className?: string | undefined;
 }
 
 export default function NetlifyImage({
@@ -24,6 +26,8 @@ export default function NetlifyImage({
   sizes,
   style,
   square,
+  priority,
+  className,
 }: NetlifyImageProps) {
   return (
     <Image
@@ -35,6 +39,8 @@ export default function NetlifyImage({
       fill={fill}
       sizes={sizes}
       style={style}
+      priority={priority}
+      className={className}
     />
   );
 }

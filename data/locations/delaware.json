@@ -1,0 +1,18 @@
+{
+  "title": "Delaware",
+  "sublocations": [
+    {
+      "title": "Bombay Hook National Wildlife Refuge",
+      "images": [
+        "/uploads/copy-of-great-blue-heron-1-denoiseai-standard.jpg",
+        "/uploads/copy-of-great-blue-heron-denoiseai-standard.jpg",
+        "/uploads/copy-of-northern-shoveler-1-denoiseai-standard.jpg",
+        "/uploads/copy-of-northern-shoveler-2-denoiseai-standard.jpg",
+        "/uploads/copy-of-northern-shoveler-denoiseai-standard.jpg"
+      ],
+      "thumbnail": "/uploads/copy-of-northern-shoveler-2-denoiseai-standard.jpg",
+      "coordinates": "{\"type\": \"Point\", \"coordinates\": [-75.4731068, 39.25982390000001]}"
+    }
+  ],
+  "thumbnail": "/uploads/copy-of-great-blue-heron-1-denoiseai-standard.jpg"
+}

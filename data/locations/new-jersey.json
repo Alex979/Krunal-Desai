@@ -1,0 +1,18 @@
+{
+  "title": "New Jersey",
+  "sublocations": [
+    {
+      "title": "Cape May - Atlantic Ocean",
+      "images": [
+        "/uploads/atlantic-bottlenose-dolphin-13-denoiseai-standard.jpg",
+        "/uploads/copy-of-atlantic-bottlenose-dolphin-24-denoiseai-standard.jpg",
+        "/uploads/copy-of-atlantic-bottlenose-dolphin-25-denoiseai-standard.jpg",
+        "/uploads/copy-of-atlantic-bottlenose-dolphin-27-denoiseai-standard.jpg",
+        "/uploads/copy-of-atlantic-bottlenose-dolphin-4-denoiseai-standard.jpg"
+      ],
+      "thumbnail": "/uploads/copy-of-atlantic-bottlenose-dolphin-25-denoiseai-standard.jpg",
+      "coordinates": "{\"type\": \"Point\", \"coordinates\": [-74.567942, 39.2800814]}"
+    }
+  ],
+  "thumbnail": "/uploads/copy-of-atlantic-bottlenose-dolphin-24-denoiseai-standard.jpg"
+}

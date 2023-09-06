@@ -1,16 +1,15 @@
 {
   "title": "Puerto Rico",
-  "thumbnail": "/uploads/green-iguana.jpg",
   "sublocations": [
     {
       "title": "Guánica State Forest",
-      "coordinates": "{\"type\":\"Point\",\"coordinates\":[-66.8624627,17.9727679]}",
-      "thumbnail": "/uploads/pearly-eyed-thrasher.jpg",
       "images": [
         "/uploads/green-iguana.jpg",
-        "/uploads/pearly-eyed-thrasher.jpg",
-        "/uploads/1f.jpg"
-      ]
+        "/uploads/pearly-eyed-thrasher.jpg"
+      ],
+      "thumbnail": "/uploads/green-iguana.jpg",
+      "coordinates": "{\"type\": \"Point\", \"coordinates\": [-66.86870619999999, 17.9714421]}"
     }
-  ]
+  ],
+  "thumbnail": "/uploads/pearly-eyed-thrasher.jpg"
 }

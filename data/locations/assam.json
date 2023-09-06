@@ -1,0 +1,43 @@
+{
+  "title": "Assam",
+  "sublocations": [
+    {
+      "title": "Hoollongapar Gibbon Sanctuary",
+      "images": [
+        "/uploads/copy-of-capped-langur-1.jpg",
+        "/uploads/copy-of-capped-langur.jpg",
+        "/uploads/copy-of-western-hoolock-gibbon-1.jpg",
+        "/uploads/copy-of-western-hoolock-gibbon-2.jpg",
+        "/uploads/copy-of-western-hoolock-gibbon.jpg"
+      ],
+      "thumbnail": "/uploads/copy-of-western-hoolock-gibbon-2.jpg",
+      "coordinates": "{\"type\": \"Point\", \"coordinates\": [94.3598744, 26.6659767]}"
+    },
+    {
+      "title": "Kaziranga National Park",
+      "images": [
+        "/uploads/copy-of-great-indian-hornbill.jpg",
+        "/uploads/copy-of-hog-deer.jpg",
+        "/uploads/copy-of-indian-elephant-1.jpg",
+        "/uploads/copy-of-indian-elephant.jpg",
+        "/uploads/copy-of-indian-rhinoceros-assam-1.jpg",
+        "/uploads/copy-of-indian-rhinoceros-assam.jpg"
+      ],
+      "thumbnail": "/uploads/copy-of-hog-deer.jpg",
+      "coordinates": "{\"type\": \"Point\", \"coordinates\": [92.993808, 26.5252813]}"
+    },
+    {
+      "title": "Manas National Park",
+      "images": [
+        "/uploads/copy-of-capped-langur.jpg",
+        "/uploads/copy-of-gaur-assam.jpg",
+        "/uploads/copy-of-indian-elephant.jpg",
+        "/uploads/copy-of-indian-rhinoceros-assam.jpg",
+        "/uploads/copy-of-lesser-adjutant.jpg"
+      ],
+      "thumbnail": "/uploads/copy-of-indian-rhinoceros-assam.jpg",
+      "coordinates": "{\"type\": \"Point\", \"coordinates\": [91.2394832, 26.8101743]}"
+    }
+  ],
+  "thumbnail": "/uploads/copy-of-lesser-adjutant.jpg"
+}

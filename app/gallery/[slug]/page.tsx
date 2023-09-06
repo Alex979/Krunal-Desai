@@ -17,7 +17,7 @@ export default async function Gallery({
     (sublocation, sublocationIndex) => {
       const photos = sublocation.images.map((photo, photoIndex) => (
         <div className="w-full aspect-[3/2] relative" key={photoIndex}>
-          <Link className="hover:opacity-50 transition relative" href={photo}>
+          <Link className="hover:opacity-50 transition" href={photo}>
             <NetlifyImage
               src={photo}
               alt="photo"
@@ -48,13 +48,12 @@ export default async function Gallery({
   return (
     <main>
       <div className="relative w-full h-[50vh]">
-        <Image
+        <NetlifyImage
           className="absolute inset-0 -z-10"
-          src={lion}
-          alt="lion"
+          src={locationData.thumbnail}
+          alt="thumbnail"
           fill
           style={{ objectFit: "cover" }}
-          placeholder="blur"
           priority
           sizes="(max-aspect-ratio: 3/4) 75vh, 100vw"
         />

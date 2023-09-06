@@ -1,0 +1,18 @@
+{
+  "title": "Kerala",
+  "sublocations": [
+    {
+      "title": "Periyar National Park",
+      "images": [
+        "/uploads/copy-of-bonnet-macaque.jpg",
+        "/uploads/copy-of-gaur-kerala.jpg",
+        "/uploads/copy-of-malabar-trogon.jpg",
+        "/uploads/copy-of-nilgiri-langur.jpg",
+        "/uploads/copy-of-sambar.jpg"
+      ],
+      "thumbnail": "/uploads/copy-of-gaur-kerala.jpg",
+      "coordinates": "{\"type\": \"Point\", \"coordinates\": [77.23684740000002, 9.462155000000001]}"
+    }
+  ],
+  "thumbnail": "/uploads/copy-of-nilgiri-langur.jpg"
+}

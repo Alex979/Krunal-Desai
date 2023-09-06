@@ -1,0 +1,68 @@
+{
+  "title": "Costa Rica",
+  "sublocations": [
+    {
+      "title": "Arenal Volcano National Park",
+      "images": [
+        "/uploads/bare-throated-tiger-heron.jpg",
+        "/uploads/crested-guan.jpg",
+        "/uploads/geoffroy-s-spider-monkey-1.jpg",
+        "/uploads/geoffroy-s-spider-monkey.jpg",
+        "/uploads/icon-photo.jpg",
+        "/uploads/keel-billed-toucan.jpg"
+      ],
+      "thumbnail": "/uploads/geoffroy-s-spider-monkey-1.jpg",
+      "coordinates": "{\"type\": \"Point\", \"coordinates\": [-84.72814869999999, 10.4612136]}"
+    },
+    {
+      "title": "Carara National Park",
+      "images": [
+        "/uploads/american-crocodile-1.jpg",
+        "/uploads/american-crocodile.jpg",
+        "/uploads/black-iguana-1.jpg",
+        "/uploads/black-iguana-2.jpg",
+        "/uploads/black-iguana.jpg",
+        "/uploads/icon-photo.jpg"
+      ],
+      "thumbnail": "/uploads/american-crocodile-1.jpg",
+      "coordinates": "{\"type\": \"Point\", \"coordinates\": [-84.6059231, 9.7811253]}"
+    },
+    {
+      "title": "Manuel Antonio National Park",
+      "images": [
+        "/uploads/black-vulture.jpg",
+        "/uploads/brown-throated-sloth.jpg",
+        "/uploads/central-american-white-faced-capuchin.jpg",
+        "/uploads/icon-photo.jpg",
+        "/uploads/scarlet-macaw.jpg",
+        "/uploads/tent-making-bat.jpg"
+      ],
+      "thumbnail": "/uploads/scarlet-macaw.jpg",
+      "coordinates": "{\"type\": \"Point\", \"coordinates\": [-84.1369879, 9.392308]}"
+    },
+    {
+      "title": "Poás Volcano National Park",
+      "images": [
+        "/uploads/icon-photo.jpg",
+        "/uploads/sooty-capped-bush-tanager-denoiseai-standard.jpg",
+        "/uploads/sooty-capped-bush-tanager.jpg"
+      ],
+      "thumbnail": "/uploads/sooty-capped-bush-tanager.jpg",
+      "coordinates": "{\"type\": \"Point\", \"coordinates\": [-84.2384171, 10.1981114]}"
+    },
+    {
+      "title": "Tortuguero National Park",
+      "images": [
+        "/uploads/boat-billed-heron.jpg",
+        "/uploads/geoffroy-s-spider-monkey-1.jpg",
+        "/uploads/geoffroy-s-spider-monkey.jpg",
+        "/uploads/green-ibis.jpg",
+        "/uploads/icon-photo.jpg",
+        "/uploads/spectacled-caiman.jpg"
+      ],
+      "thumbnail": "/uploads/geoffroy-s-spider-monkey-1.jpg",
+      "coordinates": "{\"type\": \"Point\", \"coordinates\": [-83.5069226, 10.4488767]}"
+    }
+  ],
+  "thumbnail": "/uploads/black-iguana-2.jpg"
+}
