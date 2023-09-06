@@ -32,12 +32,12 @@ export default async function Gallery({
       return (
         <div
           key={sublocationIndex}
-          className="container mx-auto px-5 sm:px-10 md:px-16 lg:px-24 xl:px-32 text-center text-slate-800"
+          className="mx-auto px-5 sm:px-10 md:px-16 lg:px-24 xl:px-32 text-center text-slate-800"
         >
           <h1 className="text-4xl my-20 leading-normal" id={sublocation.slug}>
             {sublocation.title}
           </h1>
-          <div className="grid gap-2 grid-cols-1 md:grid-cols-2 xl:grid-cols-3">
+          <div className="grid gap-2 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4">
             {photos}
           </div>
         </div>
