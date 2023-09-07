@@ -2,12 +2,10 @@
 
 import Image from "next/image";
 import lion from "./lion.jpg";
-import rhino from "./rhino.jpg";
 import wolf from "./wolf.jpg";
 import fancySeparator from "./FancySeparator.svg";
 import Navbar from "@/components/Navbar";
 import scrollIndicator from "./ScrollIndicator.svg";
-import MapGallery from "./MapGallery";
 import { Libre_Baskerville } from "next/font/google";
 import { useEffect } from "react";
 
@@ -15,6 +13,7 @@ const libreBaskerville = Libre_Baskerville({
   subsets: ["latin"],
   weight: ["400", "700"],
 });
+
 export default function Home() {
   useEffect(() => {
     // Handle netlify login
@@ -105,7 +104,6 @@ export default function Home() {
           </p>
         </div>
       </div>
-      <MapGallery />
     </main>
   );
 }
