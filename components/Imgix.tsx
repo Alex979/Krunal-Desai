@@ -1,10 +1,10 @@
 "use client";
 
 import Image from "next/image";
-import netlifyImageLoader from "@/lib/image-loader";
+import imgixImageLoader from "@/lib/image-loader";
 import { CSSProperties } from "react";
 
-interface NetlifyImageProps {
+interface ImgixProps {
   src: string;
   alt: string;
   width?: number | undefined;
@@ -17,7 +17,7 @@ interface NetlifyImageProps {
   className?: string | undefined;
 }
 
-export default function NetlifyImage({
+export default function Imgix({
   src,
   alt,
   width,
@@ -28,10 +28,10 @@ export default function NetlifyImage({
   square,
   priority,
   className,
-}: NetlifyImageProps) {
+}: ImgixProps) {
   return (
     <Image
-      loader={netlifyImageLoader(square)}
+      loader={imgixImageLoader(square)}
       src={src}
       alt={alt}
       width={width}

@@ -1,10 +1,7 @@
 import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import { getLocation, getLocations } from "@/lib/locations";
-import { getPhotos } from "@/lib/photos";
-import NetlifyImage from "@/components/NetlifyImage";
-import lion from "../../lion.jpg";
-import Image from "next/image";
+import Imgix from "@/components/Imgix";
 
 export default async function Gallery({
   params,
@@ -12,22 +9,33 @@ export default async function Gallery({
   params: { slug: string };
 }) {
   const locationData = await getLocation(params.slug);
+  if (typeof locationData.featuredImage === "string") {
+    return;
+  }
 
-  const sublocations = locationData.sublocations.map(
+  const sublocations = locationData.sublocations?.map(
     (sublocation, sublocationIndex) => {
-      const photos = sublocation.images.map((photo, photoIndex) => (
-        <div className="w-full aspect-[3/2] relative" key={photoIndex}>
-          <Link className="hover:opacity-50 transition" href={photo}>
-            <NetlifyImage
-              src={photo}
-              alt="photo"
-              fill
-              style={{ objectFit: "cover" }}
-              sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 33vw"
-            />
-          </Link>
-        </div>
-      ));
+      const photos = sublocation.images?.map((photo, photoIndex) => {
+        if (typeof photo.image !== "string") {
+          return (
+            <div className="w-full aspect-[3/2] relative" key={photoIndex}>
+              <Link
+                className="hover:opacity-50 transition"
+                href={`https://krunal-desai.imgix.net/${photo.image.filename}`}
+              >
+                <Imgix
+                  src={photo.image.filename!}
+                  alt={photo.image.alt ? photo.image.alt : ""}
+                  fill
+                  style={{ objectFit: "cover" }}
+                  sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 33vw"
+                />
+              </Link>
+            </div>
+          );
+        }
+        return;
+      });
 
       return (
         <div
@@ -48,9 +56,9 @@ export default async function Gallery({
   return (
     <main>
       <div className="relative w-full h-[50vh]">
-        <NetlifyImage
+        <Imgix
           className="absolute inset-0 -z-10"
-          src={locationData.thumbnail}
+          src={locationData.featuredImage.filename!}
           alt="thumbnail"
           fill
           style={{ objectFit: "cover" }}

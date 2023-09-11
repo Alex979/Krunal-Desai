@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { Sublocation } from "@/lib/locations";
-import NetlifyImage from "@/components/NetlifyImage";
+import NetlifyImage from "@/components/Imgix";
 
 export default function MapMarker({ sublocation }: { sublocation: Sublocation }) {
   return (
