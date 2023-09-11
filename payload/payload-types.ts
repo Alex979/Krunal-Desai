@@ -6,7 +6,7 @@
  * and re-run `payload generate:types` to regenerate this file.
  */
 
-export type Sublocation = {
+export type Sublocations = {
   title: string;
   slug?: string;
   /**
@@ -35,7 +35,7 @@ export interface Location {
   title: string;
   slug?: string;
   featuredImage: string | Media;
-  sublocations?: Sublocation;
+  sublocations?: Sublocations;
   updatedAt: string;
   createdAt: string;
 }

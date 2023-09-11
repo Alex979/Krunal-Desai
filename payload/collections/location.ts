@@ -20,7 +20,7 @@ const Location: CollectionConfig = {
     {
       name: "sublocations",
       type: "array",
-      interfaceName: "Sublocation",
+      interfaceName: "Sublocations",
       fields: [
         {
           name: "title",
