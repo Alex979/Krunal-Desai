@@ -1,5 +1,3 @@
-'use client';
-
 import Image from "next/image";
 import lion from "./lion.jpg";
 import wolf from "./wolf.jpg";
@@ -7,7 +5,6 @@ import fancySeparator from "./FancySeparator.svg";
 import Navbar from "@/components/Navbar";
 import scrollIndicator from "./ScrollIndicator.svg";
 import { Libre_Baskerville } from "next/font/google";
-import { useEffect } from "react";
 
 const libreBaskerville = Libre_Baskerville({
   subsets: ["latin"],
@@ -15,19 +12,6 @@ const libreBaskerville = Libre_Baskerville({
 });
 
 export default function Home() {
-  useEffect(() => {
-    // Handle netlify login
-    if (window.netlifyIdentity) {
-      window.netlifyIdentity.on('init', user => {
-        if (!user && window.netlifyIdentity) {
-          window.netlifyIdentity.on('login', () => {
-            document.location.href = '/admin/';
-          });
-        }
-      });
-    }
-  }, []);
-
   return (
     <main>
       <div className="relative w-full h-screen">
