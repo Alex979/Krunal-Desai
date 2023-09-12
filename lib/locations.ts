@@ -15,6 +15,7 @@ export async function getLocation(slug: string): Promise<Location> {
     depth: 1,
     limit: 1,
     pagination: false,
+    showHiddenFields: true,
     where: {
       slug: {
         equals: slug,
@@ -30,6 +31,7 @@ export async function getLocations(): Promise<Location[]> {
     collection: "locations",
     depth: 1,
     pagination: false,
+    showHiddenFields: true,
   });
   return result.docs;
 }
@@ -38,7 +40,6 @@ export async function getAllSublocations(): Promise<
   SublocationWithLocationSlug[]
 > {
   const locations = await getLocations();
-  const x = locations[0].sublocations![0];
   return locations.reduce((acc: SublocationWithLocationSlug[], location) => {
     if (location.sublocations !== undefined) {
       return acc.concat(
