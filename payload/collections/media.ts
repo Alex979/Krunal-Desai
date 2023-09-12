@@ -6,8 +6,10 @@ const Media: CollectionConfig = {
     staticURL: "https://krunal-desai.imgix.net",
     mimeTypes: ["image/*"],
     disableLocalStorage: true,
-    adminThumbnail: ({ doc }) =>
-      `https://krunal-desai.imgix.net/${doc.filename}?w=300`,
+    adminThumbnail: ({ doc }) => {
+      const urlSafeFilename = encodeURIComponent(doc.filename as string);
+      return `https://krunal-desai.imgix.net/${urlSafeFilename}?w=300`;
+    },
   },
   fields: [
     {
