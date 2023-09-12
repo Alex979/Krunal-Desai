@@ -1,46 +1,15 @@
 "use client";
 
-import Image from "next/image";
+import Image, { ImageProps } from "next/image";
 import imgixImageLoader from "@/lib/image-loader";
 import { CSSProperties } from "react";
 
-interface ImgixProps {
-  src: string;
-  alt: string;
-  width?: number | undefined;
-  height?: number | undefined;
-  fill?: boolean | undefined;
-  sizes?: string | undefined;
-  style?: CSSProperties | undefined;
+interface ImgixProps extends Omit<ImageProps, 'alt'> {
   square?: boolean | undefined;
-  priority?: boolean | undefined;
-  className?: string | undefined;
+  alt: string;
 }
 
-export default function Imgix({
-  src,
-  alt,
-  width,
-  height,
-  fill,
-  sizes,
-  style,
-  square,
-  priority,
-  className,
-}: ImgixProps) {
-  return (
-    <Image
-      loader={imgixImageLoader(square)}
-      src={src}
-      alt={alt}
-      width={width}
-      height={height}
-      fill={fill}
-      sizes={sizes}
-      style={style}
-      priority={priority}
-      className={className}
-    />
-  );
+export default function Imgix({ square, ...props }: ImgixProps) {
+  // eslint-disable-next-line jsx-a11y/alt-text
+  return <Image loader={imgixImageLoader(square)} {...props} />;
 }
