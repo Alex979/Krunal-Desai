@@ -22,7 +22,7 @@
     "paths": {
       "@/*": ["./*"],
       "payload/generated-types": [
-        "./payload-types.ts" // Ensure this matches the path to your typescript outputFile
+        "./payload/payload-types.ts" // Ensure this matches the path to your typescript outputFile
       ]
     }
   },
