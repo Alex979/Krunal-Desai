@@ -18,20 +18,19 @@ export default async function Gallery({
       const photos = sublocation.images?.map((photo, photoIndex) => {
         if (typeof photo.image !== "string") {
           return (
-            <div className="w-full aspect-[3/2] relative" key={photoIndex}>
-              <Link
-                className="hover:opacity-50 transition"
-                href={`https://krunal-desai.imgix.net/${photo.image.filename}`}
-              >
-                <Imgix
-                  src={photo.image.filename!}
-                  alt={photo.image.alt ? photo.image.alt : ""}
-                  fill
-                  style={{ objectFit: "cover" }}
-                  sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 33vw"
-                />
-              </Link>
-            </div>
+            <Link
+              key={photoIndex}
+              className="w-full aspect-[3/2] relative hover:opacity-50 transition"
+              href={`https://krunal-desai.imgix.net/${photo.image.filename}`}
+            >
+              <Imgix
+                src={photo.image.filename!}
+                alt={photo.image.alt ? photo.image.alt : ""}
+                fill
+                style={{ objectFit: "cover" }}
+                sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, (max-width: 1536px) 33vw, 25vw"
+              />
+            </Link>
           );
         }
         return;
@@ -59,7 +58,9 @@ export default async function Gallery({
         <Imgix
           className="absolute inset-0 -z-10"
           src={locationData.featuredImage.filename!}
-          alt="thumbnail"
+          alt={
+            locationData.featuredImage.alt ? locationData.featuredImage.alt : ""
+          }
           fill
           style={{ objectFit: "cover" }}
           priority
