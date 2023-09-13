@@ -25,7 +25,9 @@ export default async function Gallery({
             >
               <Imgix
                 src={photo.image.filename!}
-                alt={photo.image.alt ? photo.image.alt : ""}
+                alt={photo.image.alt}
+                placeholder="blur"
+                blurDataURL={photo.image.blurDataUrl}
                 fill
                 style={{ objectFit: "cover" }}
                 sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, (max-width: 1536px) 33vw, 25vw"
@@ -58,9 +60,9 @@ export default async function Gallery({
         <Imgix
           className="absolute inset-0 -z-10"
           src={locationData.featuredImage.filename!}
-          alt={
-            locationData.featuredImage.alt ? locationData.featuredImage.alt : ""
-          }
+          alt={locationData.featuredImage.alt}
+          placeholder="blur"
+          blurDataURL={locationData.featuredImage.blurDataUrl}
           fill
           style={{ objectFit: "cover" }}
           priority

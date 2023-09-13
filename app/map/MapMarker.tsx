@@ -16,7 +16,9 @@ export default function MapMarker({
       <div className="w-32 h-32 rounded-full overflow-hidden border-4 border-white shadow-xl relative">
         <Imgix
           src={sublocation.mapThumbnail.filename!}
-          alt={sublocation.mapThumbnail.alt ? sublocation.mapThumbnail.alt : ""}
+          alt={sublocation.mapThumbnail.alt}
+          placeholder="blur"
+          blurDataURL={sublocation.mapThumbnail.blurDataUrl}
           width={128}
           height={128}
           square
