@@ -5,7 +5,9 @@ const Slug: Field = {
   name: "slug",
   type: "text",
   index: true,
-  hidden: true,
+  admin: {
+    hidden: true,
+  },
   hooks: {
     beforeValidate: [
       (args) => {
