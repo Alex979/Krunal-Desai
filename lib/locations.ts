@@ -15,7 +15,6 @@ export async function getLocation(slug: string): Promise<Location> {
     depth: 1,
     limit: 1,
     pagination: false,
-    showHiddenFields: true,
     where: {
       slug: {
         equals: slug,
@@ -31,7 +30,6 @@ export async function getLocations(): Promise<Location[]> {
     collection: "locations",
     depth: 1,
     pagination: false,
-    showHiddenFields: true,
   });
   return result.docs;
 }
