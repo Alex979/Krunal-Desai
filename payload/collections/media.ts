@@ -1,4 +1,5 @@
 import { CollectionConfig } from "payload/types";
+import BlurDataUrl from "../fields/blurDataUrl";
 
 const Media: CollectionConfig = {
   slug: "media",
@@ -15,7 +16,13 @@ const Media: CollectionConfig = {
     {
       name: "alt",
       type: "text",
+      required: true,
+      admin: {
+        description:
+          'Short description of the image for visually impaired users. Ex: "Green iguana"',
+      },
     },
+    BlurDataUrl,
   ],
 };
 
