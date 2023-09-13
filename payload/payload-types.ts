@@ -41,7 +41,8 @@ export interface Location {
 }
 export interface Media {
   id: string;
-  alt?: string;
+  alt: string;
+  blurDataUrl?: string;
   updatedAt: string;
   createdAt: string;
   url?: string;
