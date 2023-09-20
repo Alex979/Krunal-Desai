@@ -44,9 +44,9 @@ export default async function Gallery({
           className="mx-auto my-2 px-3 md:px-16 lg:px-24 2xl:px-32 text-slate-800"
         >
           <div className="grid gap-2 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 text-slate-600">
-            <div className="w-full aspect-[3/4] md:aspect-auto md:h-full md:row-span-2 bg-stone-100 p-[8vw] md:p-[4vw] lg:p-[2.5vw] 2xl:p-[2vw]">
+            <div className="w-full aspect-[3/2] md:aspect-auto md:h-full md:row-span-2 bg-stone-100 p-[8vw] md:p-[4vw] lg:p-[2.5vw] 2xl:p-[2vw]">
               <div className="flex justify-between">
-                <h1 className="text-[8vw] md:text-[4vw] lg:text-[3vw] 2xl:text-[2.3vw] leading-normal mb-[2vw] md:mb-[1vw] lg:mb-[0.6vw] 2xl:mb-[0.5vw]">
+                <h1 className="text-[8vw] md:text-[4vw] lg:text-[3vw] 2xl:text-[2.3vw] leading-snug mb-[2vw] md:mb-[1vw] lg:mb-[0.6vw] 2xl:mb-[0.5vw]">
                   {sublocation.title}
                 </h1>
                 <Link
@@ -73,9 +73,9 @@ export default async function Gallery({
                   </svg>
                 </Link>
               </div>
-              <p className="text-[4vw] md:text-[2.5vw] lg:text-[1.5vw] 2xl:text-[1.2vw] leading-normal">
+              <p className="text-[5vw] md:text-[2.5vw] lg:text-[1.5vw] 2xl:text-[1.2vw] leading-normal">
                 Long text describing the photo. I twas such a great place I
-                loved it so so much.
+                loved it so so much. 
               </p>
             </div>
             {photos}
@@ -101,6 +101,7 @@ export default async function Gallery({
               priority
               sizes="(max-aspect-ratio: 3/4) 75vh, 100vw"
             />
+            <div className="absolute inset-0 bg-gradient-to-b from-black from-10% to-30% opacity-20 pointer-events-none"></div>
             <Navbar theme="light" />
           </div>
         </div>
