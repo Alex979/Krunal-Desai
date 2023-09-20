@@ -41,12 +41,43 @@ export default async function Gallery({
       return (
         <div
           key={sublocationIndex}
-          className="mx-auto px-5 sm:px-10 md:px-16 lg:px-24 xl:px-32 text-center text-slate-800"
+          className="mx-auto my-2 px-3 md:px-16 lg:px-24 2xl:px-32 text-slate-800"
         >
-          <h1 className="text-4xl my-20 leading-normal" id={sublocation.slug}>
-            {sublocation.title}
-          </h1>
-          <div className="grid gap-2 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4">
+          <div className="grid gap-2 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 text-slate-600">
+            <div className="w-full aspect-[3/4] md:aspect-auto md:h-full md:row-span-2 bg-stone-100 p-[8vw] md:p-[4vw] lg:p-[2.5vw] 2xl:p-[2vw]">
+              <div className="flex justify-between">
+                <h1 className="text-[8vw] md:text-[4vw] lg:text-[3vw] 2xl:text-[2.3vw] leading-normal mb-[2vw] md:mb-[1vw] lg:mb-[0.6vw] 2xl:mb-[0.5vw]">
+                  {sublocation.title}
+                </h1>
+                <Link
+                  href={`https://www.google.com/maps/place/${sublocation.coordinates[1]},${sublocation.coordinates[0]}`}
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    strokeWidth={1.5}
+                    stroke="currentColor"
+                    className="w-10 h-10"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z"
+                    />
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z"
+                    />
+                  </svg>
+                </Link>
+              </div>
+              <p className="text-[4vw] md:text-[2.5vw] lg:text-[1.5vw] 2xl:text-[1.2vw] leading-normal">
+                Long text describing the photo. I twas such a great place I
+                loved it so so much.
+              </p>
+            </div>
             {photos}
           </div>
         </div>
@@ -56,19 +87,23 @@ export default async function Gallery({
 
   return (
     <main>
-      <div className="relative w-full h-[50vh]">
-        <Imgix
-          className="absolute inset-0 -z-10"
-          src={locationData.featuredImage.filename!}
-          alt={locationData.featuredImage.alt}
-          placeholder="blur"
-          blurDataURL={locationData.featuredImage.blurDataUrl}
-          fill
-          style={{ objectFit: "cover" }}
-          priority
-          sizes="(max-aspect-ratio: 3/4) 75vh, 100vw"
-        />
-        <Navbar theme="light" />
+      <div className="w-full h-[50vh] md:mb-16 lg:mb-28 2xl:mb-40">
+        <div className="w-full h-full p-3">
+          <div className="w-full h-full relative">
+            <Imgix
+              className="absolute inset-0 -z-10 p-[inherit]"
+              src={locationData.featuredImage.filename!}
+              alt={locationData.featuredImage.alt}
+              placeholder="blur"
+              blurDataURL={locationData.featuredImage.blurDataUrl}
+              fill
+              style={{ objectFit: "cover" }}
+              priority
+              sizes="(max-aspect-ratio: 3/4) 75vh, 100vw"
+            />
+            <Navbar theme="light" />
+          </div>
+        </div>
       </div>
       {sublocations}
     </main>
