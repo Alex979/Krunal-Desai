@@ -18,6 +18,7 @@ interface MapProps {
 interface MarkerWithSlug {
   marker: mapboxgl.Marker;
   slug: string;
+  onRemove?: () => void;
 }
 
 export default function Map({ sublocations }: MapProps) {
@@ -61,7 +62,10 @@ export default function Map({ sublocations }: MapProps) {
     sublocations: SublocationWithLocationSlug[],
     map: mapboxgl.Map
   ) => {
-    const clusters = generateClusters(sublocations, 3000 / Math.pow(2, map.getZoom() - 1));
+    const clusters = generateClusters(
+      sublocations,
+      3000 / Math.pow(2, map.getZoom() - 1)
+    );
     const clustersSet = new Set<string>();
     clusters.forEach((cluster) => {
       clustersSet.add(cluster.locationSlug + cluster.slug);
@@ -72,8 +76,9 @@ export default function Map({ sublocations }: MapProps) {
       if (clustersSet.has(marker.slug)) {
         clustersSet.delete(marker.slug);
         return true;
-      };
+      }
       marker.marker.remove();
+      if (marker.onRemove) marker.onRemove();
       return false;
     });
 
@@ -89,13 +94,12 @@ export default function Map({ sublocations }: MapProps) {
         .setLngLat(sublocation.coordinates)
         .addTo(map);
 
-      marker.on("remove", () => {
-        root.unmount();
-      });
-
       markersRef.current.push({
         marker,
         slug: sublocation.locationSlug + sublocation.slug,
+        onRemove: () => {
+          root.unmount();
+        }
       });
     });
   };
