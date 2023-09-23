@@ -41,6 +41,7 @@ export default async function Gallery({
       return (
         <div
           key={sublocationIndex}
+          id={sublocation.slug}
           className="mx-auto my-2 px-3 md:px-16 lg:px-24 2xl:px-32 text-slate-800"
         >
           <div className="grid gap-2 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 text-slate-600">
@@ -91,7 +92,7 @@ export default async function Gallery({
         <div className="w-full h-full p-3">
           <div className="w-full h-full relative">
             <Imgix
-              className="absolute inset-0 -z-10 p-[inherit]"
+              className="absolute inset-0 -z-10"
               src={locationData.featuredImage.filename!}
               alt={locationData.featuredImage.alt}
               placeholder="blur"
@@ -101,8 +102,11 @@ export default async function Gallery({
               priority
               sizes="(max-aspect-ratio: 3/4) 75vh, 100vw"
             />
-            <div className="absolute inset-0 bg-gradient-to-b from-black from-10% to-30% opacity-20 pointer-events-none"></div>
+            <div className="absolute -z-10 inset-0 bg-black opacity-20 pointer-events-none"></div>
             <Navbar theme="light" />
+            <div className="w-full h-full flex justify-center items-center text-white p-5">
+              <h1 className="text-5xl md:text-7xl lg:text-8xl 2xl:text-9xl text-center">{locationData.title.toUpperCase()}</h1>
+            </div>
           </div>
         </div>
       </div>
