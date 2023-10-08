@@ -28,7 +28,6 @@ export default function Home() {
               sizes="(max-aspect-ratio: 3/2) 150vh, 100vw"
             />
             <div className="absolute inset-0 bg-gradient-to-b from-black via-transparent to-black opacity-30 pointer-events-none"></div>
-            <Navbar theme="light" />
             <div className="absolute flex items-center justify-center w-full h-full text-white">
               <div className="h-1/2 flex flex-col items-center justify-between mt-20">
                 <div className="space-y-3 flex flex-col items-center text-shadow-lg text-center mx-5">
@@ -46,6 +45,7 @@ export default function Home() {
                 </div>
               </div>
             </div>
+            <Navbar theme="light" />
           </div>
         </div>
       </div>
