@@ -44,7 +44,7 @@ export default function Map({ sublocations }: MapProps) {
 
       mapRef.current.on("zoom", () => {
         if (!mapRef.current) return;
-        if (Math.abs(zoomRef.current - mapRef.current.getZoom()) > 0.5) {
+        if (Math.abs(zoomRef.current - mapRef.current.getZoom()) > 0.1) {
           zoomRef.current = mapRef.current.getZoom();
           updateMarkers(sublocations, mapRef.current);
         }
@@ -64,7 +64,7 @@ export default function Map({ sublocations }: MapProps) {
   ) => {
     const clusters = generateClusters(
       sublocations,
-      3000 / Math.pow(2, map.getZoom() - 1)
+      3500 / Math.pow(2, map.getZoom() - 1)
     );
     const clustersSet = new Set<string>();
     clusters.forEach((cluster) => {
