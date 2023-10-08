@@ -31,10 +31,10 @@ export default function Home() {
             <Navbar theme="light" />
             <div className="absolute flex items-center justify-center w-full h-full text-white">
               <div className="h-1/2 flex flex-col items-center justify-between mt-20">
-                <div className="space-y-3 flex flex-col items-center text-shadow-lg text-center">
-                  <h1 className="text-5xl">KRUNAL DESAI</h1>
+                <div className="space-y-3 flex flex-col items-center text-shadow-lg text-center mx-5">
+                  <h1 className=" text-4xl sm:text-5xl">KRUNAL DESAI</h1>
                   <Image src={fancySeparator} alt="separator" width={380} />
-                  <h1 className="text-3xl">Wildlife Photographer</h1>
+                  <h1 className="text-2xl sm:text-3xl">Wildlife Photographer</h1>
                 </div>
                 <div className="text-center">
                   <p>SCROLL</p>
