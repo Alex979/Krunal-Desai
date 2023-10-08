@@ -104,7 +104,7 @@ export default async function Gallery({
             />
             <div className="absolute -z-10 inset-0 bg-black opacity-20 pointer-events-none"></div>
             <Navbar theme="light" />
-            <div className="w-full h-full flex justify-center items-center text-white p-5">
+            <div className="w-full h-full flex justify-center items-center text-white p-3">
               <h1 className="text-5xl md:text-7xl lg:text-8xl 2xl:text-9xl text-center">{locationData.title.toUpperCase()}</h1>
             </div>
           </div>
