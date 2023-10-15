@@ -4,7 +4,7 @@ import Imgix from "./Imgix";
 import { ReactNode } from "react";
 
 interface ImageSectionProps {
-  children: ReactNode;
+  children?: ReactNode;
   image: Media;
   priority?: boolean;
   halfHeight?: boolean;
