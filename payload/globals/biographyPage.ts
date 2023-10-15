@@ -9,7 +9,29 @@ const BiographyPage: GlobalConfig = {
       relationTo: "media",
       required: true,
     },
-  ]
+    {
+      name: "biographyText",
+      type: "text",
+      required: true,
+    },
+    {
+      name: "conservationSection",
+      type: "group",
+      fields: [
+        {
+          name: "text",
+          type: "text",
+          required: true,
+        },
+        {
+          name: "image",
+          type: "upload",
+          relationTo: "media",
+          required: true,
+        }
+      ]
+    }
+  ],
 };
 
 export default BiographyPage;

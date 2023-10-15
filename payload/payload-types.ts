@@ -70,6 +70,11 @@ export interface User {
 export interface BiographyPage {
   id: string;
   featuredImage: string | Media;
+  biographyText: string;
+  conservationSection: {
+    text: string;
+    image: string | Media;
+  };
   updatedAt?: string;
   createdAt?: string;
 }
