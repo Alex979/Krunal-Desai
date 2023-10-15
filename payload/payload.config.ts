@@ -4,6 +4,7 @@ import Location from "./collections/location";
 import Media from "./collections/media";
 import { cloudStorage } from "@payloadcms/plugin-cloud-storage";
 import { s3Adapter } from "@payloadcms/plugin-cloud-storage/s3";
+import BiographyPage from "./globals/biographyPage";
 
 const mediaAdapter = s3Adapter({
   config: {
@@ -18,9 +19,7 @@ const mediaAdapter = s3Adapter({
 
 export default buildConfig({
   collections: [Location, Media],
-  globals: [
-    // Your globals here
-  ],
+  globals: [BiographyPage],
   typescript: {
     outputFile: path.resolve(__dirname, "./payload-types.ts"),
   },

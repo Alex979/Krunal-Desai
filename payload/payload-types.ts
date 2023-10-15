@@ -28,7 +28,9 @@ export interface Config {
     media: Media;
     users: User;
   };
-  globals: {};
+  globals: {
+    'biography-page': BiographyPage;
+  };
 }
 export interface Location {
   id: string;
@@ -64,4 +66,10 @@ export interface User {
   loginAttempts?: number;
   lockUntil?: string;
   password?: string;
+}
+export interface BiographyPage {
+  id: string;
+  featuredImage: string | Media;
+  updatedAt?: string;
+  createdAt?: string;
 }
