@@ -22,7 +22,7 @@ export default async function BiographyPage() {
         priority
         navbar
       ></ImageSection>
-      <ImageSection variableHeightOnMobile noTopPadding bgClassName="bg-stone-100">
+      <ImageSection noTopPadding bgClassName="bg-stone-100">
         <div className="w-full h-full flex justify-center items-center">
           <div className="w-full max-w-3xl p-8 space-y-8">
             <Image
@@ -45,7 +45,6 @@ export default async function BiographyPage() {
       </ImageSection>
       <ImageSection
         noTopPadding
-        variableHeightOnMobile
         image={biographyPage.conservationSection.image}
         bgClassName="bg-black opacity-40"
       >

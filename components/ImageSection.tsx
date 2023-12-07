@@ -11,7 +11,6 @@ interface ImageSectionProps {
   halfHeight?: boolean;
   navbar?: boolean;
   noTopPadding?: boolean;
-  variableHeightOnMobile?: boolean;
 }
 
 export default function ImageSection({
@@ -22,19 +21,12 @@ export default function ImageSection({
   halfHeight,
   navbar,
   noTopPadding,
-  variableHeightOnMobile,
 }: ImageSectionProps) {
   return (
     <div
       className={
         "w-full " +
-        (variableHeightOnMobile
-          ? halfHeight
-            ? "md:h-[50vh] "
-            : "md:h-screen "
-          : halfHeight
-          ? "h-[50vh] "
-          : "h-screen ") +
+        (halfHeight ? "h-[50vh] " : "h-screen ") +
         (noTopPadding ? "px-3 pb-3" : "p-3")
       }
     >
@@ -59,30 +51,8 @@ export default function ImageSection({
             )}vh, 100vw`}
           />
         )}
-        <div
-          className={
-            "absolute inset-0 " +
-            bgClassName +
-            (variableHeightOnMobile ? " hidden md:block" : "")
-          }
-        ></div>
-        <div
-          className={
-            "absolute w-full h-full" +
-            (variableHeightOnMobile ? " hidden md:block" : "")
-          }
-        >
-          {children}
-        </div>
-        <div
-          className={
-            "inset-0 " +
-            bgClassName +
-            (variableHeightOnMobile ? " block md:hidden" : "")
-          }
-        >
-          {children}
-        </div>
+        <div className={"absolute inset-0 " + bgClassName}></div>
+        <div className="absolute w-full h-full">{children}</div>
       </div>
     </div>
   );
