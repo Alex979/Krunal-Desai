@@ -29,6 +29,7 @@ export interface Config {
     users: User;
   };
   globals: {
+    'home-page': HomePage;
     'biography-page': BiographyPage;
   };
 }
@@ -66,6 +67,17 @@ export interface User {
   loginAttempts?: number;
   lockUntil?: string;
   password?: string;
+}
+export interface HomePage {
+  id: string;
+  firstSection: {
+    featuredImage: string | Media;
+  };
+  secondSection: {
+    featuredImage: string | Media;
+  };
+  updatedAt?: string;
+  createdAt?: string;
 }
 export interface BiographyPage {
   id: string;
