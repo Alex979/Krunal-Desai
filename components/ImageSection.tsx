@@ -24,19 +24,18 @@ export default function ImageSection({
   noTopPadding,
   variableHeightOnMobile,
 }: ImageSectionProps) {
-  const variableHeightBreakpoint = "md";
-
-  let containerHeight = halfHeight ? "h-[50vh]" : "h-screen";
-  if (variableHeightOnMobile) {
-    containerHeight = `${variableHeightBreakpoint}:${containerHeight}`;
-  }
+  const containerHeight = variableHeightOnMobile
+    ? halfHeight
+      ? "md:h-[50vh]"
+      : "md:h-screen"
+    : halfHeight
+    ? "h-[50vh]"
+    : "h-screen";
   const containerPadding = noTopPadding ? "px-3 pb-3" : "p-3";
   const containerClasses = `w-full ${containerHeight} ${containerPadding}`;
 
   return (
-    <div
-      className={containerClasses}
-    >
+    <div className={containerClasses}>
       <div className="w-full h-full relative">
         {navbar && <Navbar theme="light" />}
         {image && (
