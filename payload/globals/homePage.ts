@@ -26,6 +26,48 @@ const HomePage: GlobalConfig = {
           required: true,
         },
       ]
+    },
+    {
+      name: "thirdSection",
+      type: "group",
+      fields: [
+        {
+          name: "featuredImage",
+          type: "upload",
+          relationTo: "media",
+          required: true,
+        },
+        {
+          name: "portraitPhoto",
+          type: "upload",
+          relationTo: "media",
+          required: true,
+        },
+      ]
+    },
+    {
+      name: "fourthSection",
+      type: "group",
+      fields: [
+        {
+          name: "featuredImage",
+          type: "upload",
+          relationTo: "media",
+          required: true,
+        },
+        {
+          name: "blogPhoto",
+          type: "upload",
+          relationTo: "media",
+          required: true,
+        },
+        {
+          name: "galleryPhoto",
+          type: "upload",
+          relationTo: "media",
+          required: true,
+        },
+      ]
     }
   ],
 };

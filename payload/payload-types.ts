@@ -76,6 +76,15 @@ export interface HomePage {
   secondSection: {
     featuredImage: string | Media;
   };
+  thirdSection: {
+    featuredImage: string | Media;
+    portraitPhoto: string | Media;
+  };
+  fourthSection: {
+    featuredImage: string | Media;
+    blogPhoto: string | Media;
+    galleryPhoto: string | Media;
+  };
   updatedAt?: string;
   createdAt?: string;
 }
