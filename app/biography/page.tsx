@@ -22,7 +22,7 @@ export default async function BiographyPage() {
         priority
         navbar
       ></ImageSection>
-      <ImageSection noTopPadding bgClassName="bg-stone-100">
+      <ImageSection noTopPadding bgClassName="bg-stone-100" variableHeightOnMobile>
         <div className="w-full h-full flex justify-center items-center">
           <div className="w-full max-w-3xl p-8 space-y-8">
             <Image
@@ -47,24 +47,13 @@ export default async function BiographyPage() {
         noTopPadding
         image={biographyPage.conservationSection.image}
         bgClassName="bg-black opacity-40"
+        variableHeightOnMobile
       >
         <div className="w-full h-full flex justify-center items-center">
           <div className="w-full max-w-3xl p-8 space-y-8">
-            <Image
-              src={fancyDividerLight}
-              width={200}
-              alt="fancy divider"
-              className="mx-auto"
-            />
             <p className="text-lg md:text-2xl text-white leading-normal text-center">
               {biographyPage.conservationSection.text}
             </p>
-            <Image
-              src={fancyDividerLight}
-              width={200}
-              alt="fancy divider"
-              className="mx-auto rotate-180"
-            />
           </div>
         </div>
       </ImageSection>
