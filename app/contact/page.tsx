@@ -19,7 +19,7 @@ export default async function ContactPage() {
       >
         <div className="w-full h-full flex flex-col justify-center items-center text-slate-600 py-20">
           <div className="w-full max-w-lg px-16">
-            <h1 className="text-4xl my-8">Let's Chat!</h1>
+            <h1 className="text-4xl my-8">Let&apos;s Chat!</h1>
             <label className="block my-4">
               <p className="mb-1 font-bold">Name</p>
               <input className="border-slate-600 border p-2 w-full" type="text" name="name" />
