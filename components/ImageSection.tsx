@@ -12,6 +12,7 @@ interface ImageSectionProps {
   navbar?: boolean;
   noTopPadding?: boolean;
   variableHeightOnMobile?: boolean;
+  removeBgOnMobile?: boolean;
 }
 
 export default function ImageSection({
@@ -23,6 +24,7 @@ export default function ImageSection({
   navbar,
   noTopPadding,
   variableHeightOnMobile,
+  removeBgOnMobile,
 }: ImageSectionProps) {
   const containerHeight = variableHeightOnMobile
     ? halfHeight
@@ -31,7 +33,7 @@ export default function ImageSection({
     : halfHeight
     ? "h-[50vh]"
     : "h-screen";
-  const containerPadding = noTopPadding ? "px-3 pb-3" : "p-3";
+  const containerPadding = noTopPadding ? "md:px-3 md:pb-3" : "md:p-3";
   const containerClasses = `w-full ${containerHeight} ${containerPadding}`;
 
   return (
@@ -40,7 +42,7 @@ export default function ImageSection({
         {navbar && <Navbar theme="light" />}
         {image && (
           <Imgix
-            className="absolute inset-0 select-none -z-10"
+            className={"absolute inset-0 select-none -z-10" + (removeBgOnMobile ? " hidden md:block" : "")}
             src={image.filename!}
             alt={image.alt}
             fill
@@ -57,7 +59,7 @@ export default function ImageSection({
             )}vh, 100vw`}
           />
         )}
-        <div className={"absolute inset-0 -z-10 " + bgClassName}></div>
+        <div className={"absolute inset-0 -z-10 " + bgClassName + (removeBgOnMobile ? " hidden md:block" : "")}></div>
         <div className="w-full h-full">{children}</div>
       </div>
     </div>

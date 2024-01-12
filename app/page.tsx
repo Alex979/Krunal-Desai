@@ -6,6 +6,8 @@ import ImageSection from "@/components/ImageSection";
 import { getHomePage } from "@/lib/globals";
 import Imgix from "@/components/Imgix";
 import Link from "next/link";
+import BodyText from "@/components/BodyText";
+import InstagramEmbed from "@/components/InstagramEmbed";
 
 const libreBaskerville = Libre_Baskerville({
   subsets: ["latin"],
@@ -73,11 +75,13 @@ export default async function Home() {
         image={homePage.secondSection.featuredImage}
         noTopPadding
         variableHeightOnMobile
+        removeBgOnMobile
       >
-        <div className="w-full h-full flex items-center text-white">
-          <p
+        <div className="w-full h-full flex flex-col items-center justify-center text-slate-500 md:text-white">
+          <BodyText
             className={
-              "mx-9 my-16 leading-relaxed text-sm " + libreBaskerville.className
+              "mx-16 my-16 text-center md:pt-32 md:text-shadow " +
+              libreBaskerville.className
             }
           >
             &quot;My travels began at the blossoming of such primordial valleys,
@@ -91,6 +95,10 @@ export default async function Home() {
             Encouraging me to seek out transcendent wisdom of all benevolent
             souls. <br />
             <br />
+            <br className="hidden md:inline p" />
+            <br className="hidden md:inline p" />
+            <br className="hidden md:inline p" />
+            <br className="hidden md:inline p" />
             Over dignified mountains and stoic deserts,
             <br />
             I wander for the halcyon days of awe be placed into this modest bowl
@@ -101,95 +109,132 @@ export default async function Home() {
             <br />
             Amongst all those who bear witness to love and reverence — for
             humbled entry, into voyages of storm and still.&quot;
-          </p>
+          </BodyText>
+          <div className="w-full aspect-[3/2] relative md:hidden">
+            <Imgix
+              className=""
+              src={homePage.secondSection.featuredImage.filename!}
+              alt={homePage.secondSection.featuredImage.alt}
+              fill
+              style={{ objectFit: "cover" }}
+              placeholder="blur"
+              blurDataURL={homePage.secondSection.featuredImage.blurDataUrl}
+              sizes="100vw"
+            />
+          </div>
         </div>
       </ImageSection>
       <ImageSection
         image={homePage.thirdSection.featuredImage}
         noTopPadding
-        variableHeightOnMobile
         bgClassName="bg-black opacity-30"
+        variableHeightOnMobile
+        removeBgOnMobile
       >
         <div
           className={
-            "w-full h-full flex items-center justify-center flex-col text-white px-9 py-16 " +
+            "w-full h-full flex items-center justify-center flex-col text-slate-500 md:text-white " +
             libreBaskerville.className
           }
         >
-          <Imgix
-            className="rounded-full border-4 border-white"
-            src={homePage.thirdSection.portraitPhoto.filename!}
-            alt={homePage.thirdSection.portraitPhoto.alt}
-            blurDataURL={homePage.thirdSection.portraitPhoto.blurDataUrl!}
-            width={100}
-            height={100}
-            square
-          />
-          <p className="leading-relaxed text-sm mt-8">
-            Since my youth, marveling at the natural world and being so
-            fortunate to be able to observe wildlife in their breathtaking
-            habitats has instilled a sense of reverence for the pristine
-            environments to which I have traveled. Through wildlife photography,
-            I have now been blessed to share cherished moments with the stunning
-            animals of this planet.
-          </p>
-        </div>
-      </ImageSection>
-      <ImageSection noTopPadding bgClassName="" variableHeightOnMobile>
-        <div>
-          <div
-            className={
-              "bg-stone-100 text-slate-600 " + libreBaskerville.className
-            }
-          >
-            <div className="w-full aspect-[3/2] relative">
-              <Imgix
-                src={homePage.fourthSection.blogPhoto.filename!}
-                alt={homePage.fourthSection.blogPhoto.alt}
-                blurDataURL={homePage.fourthSection.blogPhoto.blurDataUrl!}
-                fill
-                style={{ objectFit: "cover" }}
-                square
-                sizes="100vw"
-              />
-            </div>
-            <div className="py-8 px-5 text-center">
-              <h2 className="font-bold text-lg">Experience My Journeys</h2>
-              <button className="border border-slate-600 py-3 px-5 text-sm mt-5 mx-auto block">
-                <Link href="/">View Blog</Link>
-              </button>
-            </div>
+          <div className="flex flex-col items-center justify-center px-16 py-16 md:mt-24">
+            <Imgix
+              className="rounded-full border-2 border-slate-500 md:border-white shadow-md md:shadow-none w-28 md:w-40"
+              src={homePage.thirdSection.portraitPhoto.filename!}
+              alt={homePage.thirdSection.portraitPhoto.alt}
+              blurDataURL={homePage.thirdSection.portraitPhoto.blurDataUrl!}
+              width={200}
+              height={200}
+              square
+            />
+            <BodyText className="leading-relaxed text-sm mt-8 text-center md:mt-40 max-w-2xl md:text-shadow">
+              Since my youth, marveling at the natural world and being so
+              fortunate to be able to observe wildlife in their breathtaking
+              habitats has instilled a sense of reverence for the pristine
+              environments to which I have traveled. Through wildlife
+              photography, I have now been blessed to share cherished moments
+              with the stunning animals of this planet.
+            </BodyText>
           </div>
-        </div>
-        <div>
-          <div
-            className={
-              "bg-stone-100 text-slate-600 mt-3 " + libreBaskerville.className
-            }
-          >
-            <div className="w-full aspect-[3/2] relative">
-              <Imgix
-                src={homePage.fourthSection.galleryPhoto.filename!}
-                alt={homePage.fourthSection.galleryPhoto.alt}
-                blurDataURL={homePage.fourthSection.galleryPhoto.blurDataUrl!}
-                fill
-                style={{ objectFit: "cover" }}
-                square
-                sizes="100vw"
-              />
-            </div>
-            <div className="py-8 px-5 text-center">
-              <h2 className="font-bold text-lg">Wilderness of the World</h2>
-              <button className="border border-slate-600 py-3 px-5 text-sm mt-5 mx-auto block">
-                <Link href="/">View Gallery</Link>
-              </button>
-              <button className="border border-slate-600 py-3 px-5 text-sm mt-5 mx-auto block">
-                <Link href="/">View Map</Link>
-              </button>
-            </div>
+          <div className="w-full aspect-[3/2] relative md:hidden">
+            <Imgix
+              className=""
+              src={homePage.thirdSection.featuredImage.filename!}
+              alt={homePage.thirdSection.featuredImage.alt}
+              fill
+              style={{ objectFit: "cover" }}
+              placeholder="blur"
+              blurDataURL={homePage.thirdSection.featuredImage.blurDataUrl}
+              sizes="100vw"
+            />
           </div>
         </div>
       </ImageSection>
+      <ImageSection
+        image={homePage.fourthSection.featuredImage}
+        noTopPadding
+        bgClassName="bg-black opacity-10"
+        variableHeightOnMobile
+        removeBgOnMobile
+      >
+        <div className="w-full h-full flex items-center justify-end">
+          <div className="w-full xl:w-1/2 xl:pl-40 xl:pr-20">
+            <div className="w-full md:max-w-lg m-auto xl:m-0">
+              <div
+                className={
+                  "bg-stone-100 text-slate-600 md:shadow-xl " +
+                  libreBaskerville.className
+                }
+              >
+                <div className="w-full aspect-[3/2] relative">
+                  <Imgix
+                    className="p-5"
+                    src={homePage.fourthSection.blogPhoto.filename!}
+                    alt={homePage.fourthSection.blogPhoto.alt}
+                    blurDataURL={homePage.fourthSection.blogPhoto.blurDataUrl!}
+                    fill
+                    style={{ objectFit: "cover" }}
+                    square
+                    sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 33vw"
+                  />
+                </div>
+                <div className="py-8 px-5 text-center">
+                  <h2 className="font-bold text-lg">Experience My Journeys</h2>
+                  <button className="border border-slate-600 hover:bg-slate-600 hover:text-stone-100 transition py-3 px-5 text-sm mt-5 mx-auto block">
+                    <Link href="/">View Blog</Link>
+                  </button>
+                </div>
+                <div className="w-full aspect-[3/2] relative">
+                  <Imgix
+                    className="p-5"
+                    src={homePage.fourthSection.galleryPhoto.filename!}
+                    alt={homePage.fourthSection.galleryPhoto.alt}
+                    blurDataURL={
+                      homePage.fourthSection.galleryPhoto.blurDataUrl!
+                    }
+                    fill
+                    style={{ objectFit: "cover" }}
+                    square
+                    sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 33vw"
+                  />
+                </div>
+                <div className="py-8 px-5 text-center">
+                  <h2 className="font-bold text-lg">Wilderness of the World</h2>
+                  <button className="border border-slate-600 hover:bg-slate-600 hover:text-stone-100 transition py-3 px-5 text-sm mt-5 mx-auto block">
+                    <Link href="/gallery">View Gallery</Link>
+                  </button>
+                  <button className="border border-slate-600 hover:bg-slate-600 hover:text-stone-100 transition py-3 px-5 text-sm mt-5 mx-auto block">
+                    <Link href="/map">View Map</Link>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </ImageSection>
+      <div className="container mx-auto my-16">
+        <InstagramEmbed />
+      </div>
     </main>
   );
 }
