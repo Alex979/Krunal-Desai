@@ -31,6 +31,7 @@ export interface Config {
   globals: {
     'home-page': HomePage;
     'biography-page': BiographyPage;
+    'contact-page': ContactPage;
   };
 }
 export interface Location {
@@ -96,6 +97,12 @@ export interface BiographyPage {
     text: string;
     image: string | Media;
   };
+  updatedAt?: string;
+  createdAt?: string;
+}
+export interface ContactPage {
+  id: string;
+  featuredImage: string | Media;
   updatedAt?: string;
   createdAt?: string;
 }

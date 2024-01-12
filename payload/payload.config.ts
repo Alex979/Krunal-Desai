@@ -6,6 +6,7 @@ import { cloudStorage } from "@payloadcms/plugin-cloud-storage";
 import { s3Adapter } from "@payloadcms/plugin-cloud-storage/s3";
 import BiographyPage from "./globals/biographyPage";
 import HomePage from "./globals/homePage";
+import ContactPage from "./globals/contactPage";
 
 const mediaAdapter = s3Adapter({
   config: {
@@ -20,7 +21,12 @@ const mediaAdapter = s3Adapter({
 
 export default buildConfig({
   collections: [Location, Media],
-  globals: [HomePage, BiographyPage],
+  globals: [HomePage, BiographyPage, ContactPage],
+  upload: {
+    limits: {
+      fileSize: 20000000, // 20MB, written in bytes
+    },
+  },
   typescript: {
     outputFile: path.resolve(__dirname, "./payload-types.ts"),
   },
