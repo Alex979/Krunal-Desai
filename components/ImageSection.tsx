@@ -32,7 +32,7 @@ export default function ImageSection({
       : "md:h-screen"
     : halfHeight
     ? "h-[50vh]"
-    : "h-screen";
+    : "h-[95vh] md:h-screen";
   const containerPadding = noTopPadding ? "md:px-3 md:pb-3" : "md:p-3";
   const containerClasses = `w-full ${containerHeight} ${containerPadding}`;
 
