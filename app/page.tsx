@@ -77,7 +77,7 @@ export default async function Home() {
         variableHeightOnMobile
         removeBgOnMobile
       >
-        <div className="w-full h-full flex flex-col items-center justify-center text-slate-500 md:text-white">
+        <div className="w-full h-full flex flex-col items-center justify-center text-slate-600 md:text-white">
           <BodyText
             className={
               "mx-16 my-16 text-center md:pt-32 md:text-shadow " +
@@ -133,7 +133,7 @@ export default async function Home() {
       >
         <div
           className={
-            "w-full h-full flex items-center justify-center flex-col text-slate-500 md:text-white " +
+            "w-full h-full flex items-center justify-center flex-col text-slate-600 md:text-white " +
             libreBaskerville.className
           }
         >
