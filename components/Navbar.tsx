@@ -45,6 +45,12 @@ export default function Navbar({ theme }: NavbarProps) {
             Biography
           </Link>
           <Link
+            href="/blog"
+            className="text-white hover:text-gray-300 transition text-lg"
+          >
+            Blog
+          </Link>
+          <Link
             href="/contact"
             className="text-white hover:text-gray-300 transition text-lg"
           >

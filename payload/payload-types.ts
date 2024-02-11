@@ -26,12 +26,14 @@ export interface Config {
   collections: {
     locations: Location;
     media: Media;
+    'blog-posts': BlogPost;
     users: User;
   };
   globals: {
     'home-page': HomePage;
     'biography-page': BiographyPage;
     'contact-page': ContactPage;
+    'blog-page': BlogPage;
   };
 }
 export interface Location {
@@ -55,6 +57,15 @@ export interface Media {
   filesize?: number;
   width?: number;
   height?: number;
+}
+export interface BlogPost {
+  id: string;
+  title: string;
+  slug?: string;
+  description: string;
+  featuredImage: string | Media;
+  updatedAt: string;
+  createdAt: string;
 }
 export interface User {
   id: string;
@@ -101,6 +112,12 @@ export interface BiographyPage {
   createdAt?: string;
 }
 export interface ContactPage {
+  id: string;
+  featuredImage: string | Media;
+  updatedAt?: string;
+  createdAt?: string;
+}
+export interface BlogPage {
   id: string;
   featuredImage: string | Media;
   updatedAt?: string;
