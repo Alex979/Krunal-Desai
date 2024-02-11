@@ -22,6 +22,7 @@ export default async function BiographyPage() {
         image={biographyPage.featuredImage}
         priority
         navbar
+        bgClassName="bg-gradient-to-b from-black to-transparent to-20% opacity-30"
       ></ImageSection>
       <ImageSection noTopPadding bgClassName="bg-stone-100" variableHeightOnMobile>
         <div className="w-full h-full flex justify-center items-center">
