@@ -76,11 +76,12 @@ export default async function Home() {
         noTopPadding
         variableHeightOnMobile
         removeBgOnMobile
+        bgClassName=""
       >
         <div className="w-full h-full flex flex-col items-center justify-center text-slate-600 md:text-white">
           <BodyText
             className={
-              "mx-16 my-16 text-center md:pt-32 md:text-shadow " +
+              "mx-16 my-16 text-center md:pt-32 font-bold " +
               libreBaskerville.className
             }
           >
@@ -127,7 +128,7 @@ export default async function Home() {
       <ImageSection
         image={homePage.thirdSection.featuredImage}
         noTopPadding
-        bgClassName="bg-black opacity-30"
+        bgClassName=""
         variableHeightOnMobile
         removeBgOnMobile
       >
@@ -147,7 +148,7 @@ export default async function Home() {
               height={200}
               square
             />
-            <BodyText className="leading-relaxed text-sm mt-8 text-center md:mt-40 max-w-2xl md:text-shadow">
+            <BodyText className="leading-relaxed text-sm mt-8 text-center p-3 md:mt-40 max-w-2xl font-bold text-on-bg">
               Since my youth, marveling at the natural world and being so
               fortunate to be able to observe wildlife in their breathtaking
               habitats has instilled a sense of reverence for the pristine
@@ -173,13 +174,13 @@ export default async function Home() {
       <ImageSection
         image={homePage.fourthSection.featuredImage}
         noTopPadding
-        bgClassName="bg-black opacity-10"
+        bgClassName=""
         variableHeightOnMobile
         removeBgOnMobile
       >
         <div className="w-full h-full flex items-center justify-end">
           <div className="w-full xl:w-1/2 xl:pl-40 xl:pr-20">
-            <div className="w-full md:max-w-lg m-auto xl:m-0">
+            <div className="w-full md:max-w-md m-auto xl:m-0">
               <div
                 className={
                   "bg-stone-100 text-slate-600 md:shadow-xl " +

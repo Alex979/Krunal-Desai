@@ -7,7 +7,7 @@ interface BodyTextProps {
 
 export default function BodyText({ children, className } : BodyTextProps) {
   return (
-    <p className={"leading-relaxed text-sm md:text-lg md:leading-loose " + className}>
+    <p className={"leading-relaxed text-sm md:text-xl md:leading-loose " + className}>
       {children}
     </p>
   )
