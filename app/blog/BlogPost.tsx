@@ -22,9 +22,9 @@ export default function BlogPost({ blogPost }: { blogPost: BlogPost }) {
           sizes="33vw"
         />
       </div>
-      <div className="p-5">
-        <h2 className="text-xl font-bold">{blogPost.title}</h2>
-        <h3 className="text-lg">{blogPost.description}</h3>
+      <div className="p-3">
+        <h2 className="text-xl font-bold my-1">{blogPost.title}</h2>
+        <h3 className="text-lg my-1">{blogPost.description}</h3>
       </div>
     </Link>
   );

@@ -15,7 +15,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`bg-stone-100 md:bg-stone-200 ${baskervville.className}`}>{children}</body>
+      <body className={`bg-stone-100 text-slate-700 ${baskervville.className}`}>{children}</body>
     </html>
   );
 }
