@@ -9,7 +9,7 @@ export default function BlogPost({ blogPost }: { blogPost: BlogPost }) {
   }
 
   return (
-    <Link href={`/blog/${blogPost.slug}`} className="bg-stone-100 hover:opacity-80 transition">
+    <Link href={`/blog/${blogPost.slug}`} className="hover:opacity-80 transition">
       <div className="w-full aspect-[3/2] relative">
         <Imgix
           className="w-full h-full"
