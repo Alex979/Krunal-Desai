@@ -15,14 +15,17 @@ const serialize = (children: any[]) =>
         <span dangerouslySetInnerHTML={{ __html: escapeHTML(node.text) }} />
       );
 
+      // @ts-ignore
       if (node.bold) {
         text = <strong key={i}>{text}</strong>;
       }
 
+      // @ts-ignore
       if (node.code) {
         text = <code key={i}>{text}</code>;
       }
 
+      // @ts-ignore
       if (node.italic) {
         text = <em key={i}>{text}</em>;
       }
