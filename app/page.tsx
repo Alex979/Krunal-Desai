@@ -76,13 +76,12 @@ export default async function Home() {
         noTopPadding
         variableHeightOnMobile
         removeBgOnMobile
-        bgClassName=""
+        bgClassName="bg-gradient-to-t from-white to-transparent to-40% opacity-50"
       >
-        <div className="w-full h-full flex flex-col items-center justify-center text-slate-600 md:text-white">
+        <div className="w-full h-full flex flex-col items-center justify-between text-center py-12">
           <BodyText
             className={
-              "mx-16 my-16 text-center md:pt-32 font-bold " +
-              libreBaskerville.className
+              "mx-16 font-bold " + libreBaskerville.className
             }
           >
             &quot;My travels began at the blossoming of such primordial valleys,
@@ -90,20 +89,20 @@ export default async function Home() {
             Where the flute&apos;s melody lit my path through hinterlands under
             moonless nights.
             <br />
-            <br />
             Thou vast endlessness offers forth sweet hymns and vessels of
             sunlight, <br />
             Encouraging me to seek out transcendent wisdom of all benevolent
             souls. <br />
-            <br />
-            <br className="hidden md:inline p" />
-            <br className="hidden md:inline p" />
-            <br className="hidden md:inline p" />
-            <br className="hidden md:inline p" />
+          </BodyText>
+          <BodyText
+            className={
+              "mx-16 font-bold " + libreBaskerville.className
+            }
+          >
             Over dignified mountains and stoic deserts,
             <br />
             I wander for the halcyon days of awe be placed into this modest bowl
-            of alms. <br />
+            of alms.
             <br />
             For my journey&apos;s search delves within the longing for radiant
             dancing in a cove of dreamscapes,
@@ -134,13 +133,13 @@ export default async function Home() {
       >
         <div
           className={
-            "w-full h-full flex items-center justify-center flex-col text-slate-600 md:text-white " +
+            "w-full h-1/2 flex items-center justify-center flex-col text-slate-600 md:text-white " +
             libreBaskerville.className
           }
         >
-          <div className="flex flex-col items-center justify-center px-16 py-16 md:mt-24">
+          <div className="flex flex-col md:flex-row items-center justify-center px-16 py-16 md:mb-20">
             <Imgix
-              className="rounded-full border-2 border-slate-500 md:border-white shadow-md md:shadow-none w-28 md:w-40"
+              className="rounded-full border-2 border-slate-500 md:border-white shadow-md md:shadow-none w-28 md:w-40 md:mr-10"
               src={homePage.thirdSection.portraitPhoto.filename!}
               alt={homePage.thirdSection.portraitPhoto.alt}
               blurDataURL={homePage.thirdSection.portraitPhoto.blurDataUrl!}
@@ -148,7 +147,7 @@ export default async function Home() {
               height={200}
               square
             />
-            <BodyText className="leading-relaxed text-sm mt-8 text-center p-3 md:mt-40 max-w-2xl font-bold text-on-bg">
+            <BodyText className="leading-relaxed text-sm mt-8 p-3 max-w-2xl font-bold">
               Since my youth, marveling at the natural world and being so
               fortunate to be able to observe wildlife in their breathtaking
               habitats has instilled a sense of reverence for the pristine

@@ -21,6 +21,11 @@ const BlogPost: CollectionConfig = {
       relationTo: "media",
       required: true,
     },
+    {
+      name: "content",
+      type: "richText",
+      required: true,
+    },
   ],
   admin: {
     useAsTitle: "title",

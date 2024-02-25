@@ -64,6 +64,9 @@ export interface BlogPost {
   slug?: string;
   description: string;
   featuredImage: string | Media;
+  content: {
+    [k: string]: unknown;
+  }[];
   updatedAt: string;
   createdAt: string;
 }
