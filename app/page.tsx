@@ -79,12 +79,8 @@ export default async function Home() {
         bgClassName="bg-gradient-to-t from-white to-transparent to-40% opacity-50"
       >
         <div className="w-full h-full flex flex-col items-center justify-between text-center py-12">
-          <BodyText
-            className={
-              "mx-16 font-bold " + libreBaskerville.className
-            }
-          >
-            &quot;My travels began at the blossoming of such primordial valleys,
+          <BodyText className={"mx-10 md:font-bold " + libreBaskerville.className}>
+            My travels began at the blossoming of such primordial valleys,
             <br />
             Where the flute&apos;s melody lit my path through hinterlands under
             moonless nights.
@@ -94,11 +90,7 @@ export default async function Home() {
             Encouraging me to seek out transcendent wisdom of all benevolent
             souls. <br />
           </BodyText>
-          <BodyText
-            className={
-              "mx-16 font-bold " + libreBaskerville.className
-            }
-          >
+          <BodyText className={"mx-10 md:font-bold mt-10 " + libreBaskerville.className}>
             Over dignified mountains and stoic deserts,
             <br />
             I wander for the halcyon days of awe be placed into this modest bowl
@@ -108,20 +100,20 @@ export default async function Home() {
             dancing in a cove of dreamscapes,
             <br />
             Amongst all those who bear witness to love and reverence — for
-            humbled entry, into voyages of storm and still.&quot;
+            humbled entry, into voyages of storm and still.
           </BodyText>
-          <div className="w-full aspect-[3/2] relative md:hidden">
-            <Imgix
-              className=""
-              src={homePage.secondSection.featuredImage.filename!}
-              alt={homePage.secondSection.featuredImage.alt}
-              fill
-              style={{ objectFit: "cover" }}
-              placeholder="blur"
-              blurDataURL={homePage.secondSection.featuredImage.blurDataUrl}
-              sizes="100vw"
-            />
-          </div>
+        </div>
+        <div className="w-full aspect-[3/2] relative md:hidden">
+          <Imgix
+            className=""
+            src={homePage.secondSection.featuredImage.filename!}
+            alt={homePage.secondSection.featuredImage.alt}
+            fill
+            style={{ objectFit: "cover" }}
+            placeholder="blur"
+            blurDataURL={homePage.secondSection.featuredImage.blurDataUrl}
+            sizes="100vw"
+          />
         </div>
       </ImageSection>
       <ImageSection
@@ -137,7 +129,7 @@ export default async function Home() {
             libreBaskerville.className
           }
         >
-          <div className="flex flex-col md:flex-row items-center justify-center px-16 py-16 md:mb-20">
+          <div className="flex flex-col md:flex-row items-center justify-center px-10 py-12 md:mb-20">
             <Imgix
               className="rounded-full border-2 border-slate-500 md:border-white shadow-md md:shadow-none w-28 md:w-40 md:mr-10"
               src={homePage.thirdSection.portraitPhoto.filename!}
@@ -147,7 +139,7 @@ export default async function Home() {
               height={200}
               square
             />
-            <BodyText className="leading-relaxed text-sm mt-8 p-3 max-w-2xl font-bold">
+            <BodyText className="mt-8 max-w-2xl md:font-bold">
               Since my youth, marveling at the natural world and being so
               fortunate to be able to observe wildlife in their breathtaking
               habitats has instilled a sense of reverence for the pristine
@@ -156,7 +148,7 @@ export default async function Home() {
               with the stunning animals of this planet.
             </BodyText>
           </div>
-          <div className="w-full aspect-[3/2] relative md:hidden">
+          {/* <div className="w-full aspect-[3/2] relative md:hidden">
             <Imgix
               className=""
               src={homePage.thirdSection.featuredImage.filename!}
@@ -167,7 +159,7 @@ export default async function Home() {
               blurDataURL={homePage.thirdSection.featuredImage.blurDataUrl}
               sizes="100vw"
             />
-          </div>
+          </div> */}
         </div>
       </ImageSection>
       <ImageSection
@@ -188,7 +180,7 @@ export default async function Home() {
               >
                 <div className="w-full aspect-[3/2] relative">
                   <Imgix
-                    className="p-5"
+                    className="md:p-5"
                     src={homePage.fourthSection.blogPhoto.filename!}
                     alt={homePage.fourthSection.blogPhoto.alt}
                     blurDataURL={homePage.fourthSection.blogPhoto.blurDataUrl!}
@@ -206,7 +198,7 @@ export default async function Home() {
                 </div>
                 <div className="w-full aspect-[3/2] relative">
                   <Imgix
-                    className="p-5"
+                    className="md:p-5"
                     src={homePage.fourthSection.galleryPhoto.filename!}
                     alt={homePage.fourthSection.galleryPhoto.alt}
                     blurDataURL={
