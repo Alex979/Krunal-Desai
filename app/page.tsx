@@ -79,7 +79,7 @@ export default async function Home() {
         bgClassName="bg-gradient-to-t from-white to-transparent to-40% opacity-50"
       >
         <div className="w-full h-full flex flex-col items-center justify-between text-center py-12">
-          <BodyText className={"mx-10 md:font-bold " + libreBaskerville.className}>
+          <BodyText className="mx-10 md:font-bold">
             My travels began at the blossoming of such primordial valleys,
             <br />
             Where the flute&apos;s melody lit my path through hinterlands under
@@ -90,7 +90,7 @@ export default async function Home() {
             Encouraging me to seek out transcendent wisdom of all benevolent
             souls. <br />
           </BodyText>
-          <BodyText className={"mx-10 md:font-bold mt-10 " + libreBaskerville.className}>
+          <BodyText className="mx-10 md:font-bold mt-10">
             Over dignified mountains and stoic deserts,
             <br />
             I wander for the halcyon days of awe be placed into this modest bowl
