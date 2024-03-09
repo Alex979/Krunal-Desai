@@ -21,7 +21,7 @@ export default async function BiographyPage() {
         bgClassName="bg-gradient-to-b from-black to-transparent to-40% opacity-30"
       ></ImageSection>
       <div className="container mx-auto">
-        <div className="grid grid-cols-3 gap-4 m-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 m-8">
           {blogPosts.map((blogPost, index) => {
             return <BlogPost key={index} blogPost={blogPost} />;
           })}
