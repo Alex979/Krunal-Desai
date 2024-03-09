@@ -74,7 +74,7 @@ export default async function Gallery({
                   </svg>
                 </Link>
               </div>
-              <p className="text-[5vw] md:text-[2.5vw] lg:text-[1.5vw] 2xl:text-[1.2vw] leading-normal">
+              <p className="text-[5vw] lg:text-[1.5vw] 2xl:text-[1.2vw] leading-normal">
                 Long text describing the photo. I twas such a great place I
                 loved it so so much.
               </p>
