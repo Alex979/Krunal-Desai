@@ -44,10 +44,10 @@ export default async function Gallery({
           id={sublocation.slug}
           className="mx-auto my-2 px-3 md:px-16 lg:px-24 2xl:px-32 text-slate-800"
         >
-          <div className="grid gap-2 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 text-slate-600">
-            <div className="w-full aspect-[3/2] md:aspect-auto md:h-full md:row-span-2 bg-stone-100 p-[8vw] md:p-[4vw] lg:p-[2.5vw] 2xl:p-[2vw]">
+          <div className="grid gap-2 grid-cols-1 lg:grid-cols-3 2xl:grid-cols-4">
+            <div className="w-full aspect-[3/2] lg:aspect-auto p-[8vw] md:p-[4vw] lg:p-[2.5vw] 2xl:p-[2vw]">
               <div className="flex justify-between">
-                <h1 className="text-[8vw] md:text-[4vw] lg:text-[3vw] 2xl:text-[2.3vw] leading-snug mb-[2vw] md:mb-[1vw] lg:mb-[0.6vw] 2xl:mb-[0.5vw]">
+                <h1 className="text-[8vw] lg:text-[3vw] 2xl:text-[2.3vw] leading-snug mb-[2vw] md:mb-[1vw] lg:mb-[0.6vw] 2xl:mb-[0.5vw]">
                   {sublocation.title}
                 </h1>
                 <Link
@@ -76,10 +76,14 @@ export default async function Gallery({
               </div>
               <p className="text-[5vw] md:text-[2.5vw] lg:text-[1.5vw] 2xl:text-[1.2vw] leading-normal">
                 Long text describing the photo. I twas such a great place I
-                loved it so so much. 
+                loved it so so much.
               </p>
             </div>
-            {photos}
+            <div className="lg:col-span-2 2xl:col-span-3">
+              <div className="grid gap-2 grid-cols-1 lg:grid-cols-2 2xl:grid-cols-3">
+                {photos}
+              </div>
+            </div>
           </div>
         </div>
       );
@@ -105,7 +109,9 @@ export default async function Gallery({
             <div className="absolute -z-10 inset-0 bg-black opacity-20 pointer-events-none"></div>
             <Navbar theme="light" />
             <div className="w-full h-full flex justify-center items-center text-white p-3">
-              <h1 className="text-5xl md:text-7xl lg:text-8xl 2xl:text-9xl text-center">{locationData.title.toUpperCase()}</h1>
+              <h1 className="text-5xl md:text-7xl lg:text-8xl 2xl:text-9xl text-center">
+                {locationData.title.toUpperCase()}
+              </h1>
             </div>
           </div>
         </div>
