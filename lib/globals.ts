@@ -1,4 +1,4 @@
-import { BiographyPage, BlogPage, ContactPage, HomePage } from "@/payload/payload-types";
+import { BiographyPage, BlogPage, ContactPage, FaqPage, HomePage } from "@/payload/payload-types";
 import getPayloadClient from "@/payload/payloadClient";
 
 export async function getHomePage(): Promise<HomePage> {
@@ -32,6 +32,15 @@ export async function getBlogPage(): Promise<BlogPage> {
   const payload = await getPayloadClient();
   const result = await payload.findGlobal({
     slug: "blog-page",
+    depth: 1,
+  });
+  return result;
+}
+
+export async function getFaqPage(): Promise<FaqPage> {
+  const payload = await getPayloadClient();
+  const result = await payload.findGlobal({
+    slug: "faq-page",
     depth: 1,
   });
   return result;

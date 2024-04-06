@@ -56,6 +56,12 @@ export default function Navbar({ theme }: NavbarProps) {
           >
             Contact
           </Link>
+          <Link
+            href="/faq"
+            className="text-white hover:text-gray-300 transition text-lg"
+          >
+            FAQ
+          </Link>
           <div className="mx-5"></div>
           <Link href="https://www.instagram.com/_krunaldesai_/">
             <svg
@@ -124,6 +130,9 @@ export default function Navbar({ theme }: NavbarProps) {
           </Link>
           <Link href="/contact" className="text-slate-600 text-3xl">
             Contact
+          </Link>
+          <Link href="/faq" className="text-slate-600 text-3xl">
+            FAQ
           </Link>
           <div className="my-5"></div>
           <Link href="https://www.instagram.com/_krunaldesai_/">

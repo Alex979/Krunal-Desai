@@ -10,7 +10,11 @@ export default async function ContactPage() {
 
   return (
     <main>
-      <ImageSection image={contactPage.featuredImage} navbar />
+      <ImageSection
+        image={contactPage.featuredImage}
+        navbar
+        bgClassName="bg-gradient-to-b from-black to-transparent to-20% opacity-50"
+      />
       <ImageSection
         noTopPadding
         bgClassName="bg-stone-100"
@@ -22,15 +26,27 @@ export default async function ContactPage() {
             <h1 className="text-4xl my-8">Let&apos;s Chat!</h1>
             <label className="block my-4">
               <p className="mb-1 font-bold">Name</p>
-              <input className="border-slate-600 border p-2 w-full" type="text" name="name" />
+              <input
+                className="border-slate-600 border p-2 w-full"
+                type="text"
+                name="name"
+              />
             </label>
             <label className="block my-4">
               <p className="mb-1 font-bold">Email</p>
-              <input className="border-slate-600 border p-2 w-full" type="text" name="email" />
+              <input
+                className="border-slate-600 border p-2 w-full"
+                type="text"
+                name="email"
+              />
             </label>
             <label className="block my-4">
               <p className="mb-1 font-bold">Message</p>
-              <textarea className="border-slate-600 border p-2 w-full" name="message" rows={5} />
+              <textarea
+                className="border-slate-600 border p-2 w-full"
+                name="message"
+                rows={5}
+              />
             </label>
             <button className="border border-slate-600 hover:bg-slate-600 hover:text-stone-100 transition py-3 px-5 text-sm my-4 block">
               Submit

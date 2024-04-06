@@ -34,6 +34,7 @@ export interface Config {
     'biography-page': BiographyPage;
     'contact-page': ContactPage;
     'blog-page': BlogPage;
+    'faq-page': FaqPage;
   };
 }
 export interface Location {
@@ -123,6 +124,17 @@ export interface ContactPage {
 export interface BlogPage {
   id: string;
   featuredImage: string | Media;
+  updatedAt?: string;
+  createdAt?: string;
+}
+export interface FaqPage {
+  id: string;
+  featuredImage: string | Media;
+  faqs?: {
+    question: string;
+    answer: string;
+    id?: string;
+  }[];
   updatedAt?: string;
   createdAt?: string;
 }

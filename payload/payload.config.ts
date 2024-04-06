@@ -9,6 +9,7 @@ import HomePage from "./globals/homePage";
 import ContactPage from "./globals/contactPage";
 import BlogPage from "./globals/blogPage";
 import BlogPost from "./collections/blogPost";
+import FaqPage from "./globals/faqPage";
 
 const mediaAdapter = s3Adapter({
   config: {
@@ -23,7 +24,7 @@ const mediaAdapter = s3Adapter({
 
 export default buildConfig({
   collections: [Location, Media, BlogPost],
-  globals: [HomePage, BiographyPage, ContactPage, BlogPage],
+  globals: [HomePage, BiographyPage, ContactPage, BlogPage, FaqPage],
   upload: {
     limits: {
       fileSize: 20000000, // 20MB, written in bytes

@@ -40,7 +40,13 @@ export default async function BiographyPage() {
               alt="feather icon"
               className="mx-auto"
             />
-            <BodyText>{biographyPage.biographyText}</BodyText>
+            <BodyText className="text-justify">{biographyPage.biographyText}</BodyText>
+            <Image
+              src={featherIconDark}
+              width={150}
+              alt="feather icon"
+              className="mx-auto rotate-180"
+            />
           </div>
         </div>
       </ImageSection>
@@ -59,7 +65,13 @@ export default async function BiographyPage() {
               alt="feather icon"
               className="mx-auto"
             />
-            <BodyText>{biographyPage.conservationSection.text}</BodyText>
+            <BodyText className="text-justify">{biographyPage.conservationSection.text}</BodyText>
+            <Image
+              src={featherIconDark}
+              width={150}
+              alt="feather icon"
+              className="mx-auto rotate-180"
+            />
           </div>
         </div>
       </ImageSection>
