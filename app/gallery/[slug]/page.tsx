@@ -43,7 +43,7 @@ export default async function Gallery({
         <div
           key={sublocationIndex}
           id={sublocation.slug}
-          className="mx-auto my-2 px-3 md:px-16 lg:px-24 2xl:px-32 text-slate-800"
+          className="mx-auto my-2 px-3 md:px-16 lg:px-24 2xl:px-32"
         >
           <div className="grid gap-2 grid-cols-1 lg:grid-cols-3 2xl:grid-cols-4">
             <div className="w-full aspect-[3/2] lg:aspect-auto p-[8vw] md:p-[4vw] lg:p-[2.5vw] 2xl:p-[2vw]">
