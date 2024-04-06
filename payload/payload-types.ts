@@ -36,6 +36,7 @@ export interface Config {
     'contact-page': ContactPage;
     'blog-page': BlogPage;
     'faq-page': FaqPage;
+    'gallery-page': GalleryPage;
   };
 }
 export interface Location {
@@ -136,6 +137,12 @@ export interface FaqPage {
     answer: string;
     id?: string;
   }[];
+  updatedAt?: string;
+  createdAt?: string;
+}
+export interface GalleryPage {
+  id: string;
+  locations: string[] | Location[];
   updatedAt?: string;
   createdAt?: string;
 }
