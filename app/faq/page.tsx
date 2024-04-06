@@ -27,7 +27,7 @@ export default async function FaqPage() {
                 <h1 className="text-3xl font-bold leading-snug my-4">
                   {faq.question}
                 </h1>
-                <p className="text-xl leading-relaxed my-4">{faq.answer}</p>
+                <p className="text-xl leading-relaxed my-4 text-justify">{faq.answer}</p>
               </div>
             );
           })}
