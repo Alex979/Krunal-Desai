@@ -2,6 +2,7 @@ import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import { getLocation, getLocations } from "@/lib/locations";
 import Imgix from "@/components/Imgix";
+import ImageSection from "@/components/ImageSection";
 
 export default async function Gallery({
   params,
@@ -75,8 +76,7 @@ export default async function Gallery({
                 </Link>
               </div>
               <p className="text-[5vw] lg:text-[1.5vw] 2xl:text-[1.2vw] leading-normal">
-                Long text describing the photo. I twas such a great place I
-                loved it so so much.
+                {sublocation.shortDescription}
               </p>
             </div>
             <div className="lg:col-span-2 2xl:col-span-3">
@@ -92,31 +92,20 @@ export default async function Gallery({
 
   return (
     <main>
-      <div className="w-full h-[50vh] md:mb-16 lg:mb-28 2xl:mb-40">
-        <div className="w-full h-full p-3">
-          <div className="w-full h-full relative">
-            <Imgix
-              className="absolute inset-0 -z-10"
-              src={locationData.featuredImage.filename!}
-              alt={locationData.featuredImage.alt}
-              placeholder="blur"
-              blurDataURL={locationData.featuredImage.blurDataUrl}
-              fill
-              style={{ objectFit: "cover" }}
-              priority
-              sizes="(max-aspect-ratio: 3/4) 75vh, 100vw"
-            />
-            <div className="absolute -z-10 inset-0 bg-black opacity-20 pointer-events-none"></div>
-            <Navbar theme="light" />
-            <div className="w-full h-full flex justify-center items-center text-white p-3">
-              <h1 className="text-5xl md:text-7xl lg:text-8xl 2xl:text-9xl text-center">
-                {locationData.title.toUpperCase()}
-              </h1>
-            </div>
-          </div>
+      <ImageSection
+        image={locationData.featuredImage}
+        priority
+        navbar
+        halfHeight
+        bgClassName="bg-gradient-to-b from-black to-transparent to-40% opacity-30"
+      >
+        <div className="w-full h-full flex justify-center items-center text-white p-3">
+          <h1 className="text-5xl md:text-7xl lg:text-8xl 2xl:text-9xl text-center">
+            {locationData.title.toUpperCase()}
+          </h1>
         </div>
-      </div>
-      {sublocations}
+      </ImageSection>
+      <div className="py-16 space-y-16">{sublocations}</div>
     </main>
   );
 }

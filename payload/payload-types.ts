@@ -8,6 +8,7 @@
 
 export type Sublocations = {
   title: string;
+  shortDescription: string;
   slug?: string;
   /**
    * @minItems 2

@@ -27,6 +27,11 @@ const Location: CollectionConfig = {
           type: "text",
           required: true,
         },
+        {
+          name: "shortDescription",
+          type: "textarea",
+          required: true,
+        },
         Slug,
         {
           name: "coordinates",
