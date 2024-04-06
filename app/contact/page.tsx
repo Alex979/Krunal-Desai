@@ -13,6 +13,7 @@ export default async function ContactPage() {
       <ImageSection
         image={contactPage.featuredImage}
         navbar
+        objectPosition="object-[37%_center]"
         bgClassName="bg-gradient-to-b from-black to-transparent to-20% opacity-50"
       />
       <ImageSection

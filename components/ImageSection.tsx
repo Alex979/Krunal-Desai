@@ -13,6 +13,7 @@ interface ImageSectionProps {
   noTopPadding?: boolean;
   variableHeightOnMobile?: boolean;
   removeBgOnMobile?: boolean;
+  objectPosition?: string;
 }
 
 export default function ImageSection({
@@ -25,6 +26,7 @@ export default function ImageSection({
   noTopPadding,
   variableHeightOnMobile,
   removeBgOnMobile,
+  objectPosition,
 }: ImageSectionProps) {
   const containerHeight = variableHeightOnMobile
     ? halfHeight
@@ -42,7 +44,7 @@ export default function ImageSection({
         {navbar && <Navbar theme="light" />}
         {image && (
           <Imgix
-            className={"absolute inset-0 select-none -z-10" + (removeBgOnMobile ? " hidden md:block" : "")}
+            className={"absolute inset-0 select-none -z-10" + (removeBgOnMobile ? " hidden md:block" : "") + (objectPosition ? ` ${objectPosition}` : "")}
             src={image.filename!}
             alt={image.alt}
             fill
