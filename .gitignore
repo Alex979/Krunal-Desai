@@ -43,3 +43,7 @@ next-env.d.ts
 
 # Python environments
 /env
+
+# Local scripts
+/auto-gallery
+auto_gallery.py
