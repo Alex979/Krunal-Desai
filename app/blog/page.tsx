@@ -18,7 +18,7 @@ export default async function BiographyPage() {
         image={blogPage.featuredImage}
         navbar
         halfHeight
-        bgClassName="bg-gradient-to-b from-black to-transparent to-40% opacity-50"
+        bgClassName="bg-gradient-to-b from-black to-transparent to-20% opacity-30"
       ></ImageSection>
       <div className="container mx-auto">
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 m-8">

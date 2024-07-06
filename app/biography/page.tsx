@@ -54,7 +54,6 @@ export default async function BiographyPage() {
         noTopPadding
         image={biographyPage.conservationSection.image}
         bgClassName=""
-        halfHeight
       ></ImageSection>
       <ImageSection noTopPadding bgClassName="" variableHeightOnMobile>
         <div className="w-full h-full flex justify-center items-center">

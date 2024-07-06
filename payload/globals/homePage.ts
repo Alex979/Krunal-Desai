@@ -13,7 +13,7 @@ const HomePage: GlobalConfig = {
           relationTo: "media",
           required: true,
         },
-      ]
+      ],
     },
     {
       name: "secondSection",
@@ -25,7 +25,7 @@ const HomePage: GlobalConfig = {
           relationTo: "media",
           required: true,
         },
-      ]
+      ],
     },
     {
       name: "thirdSection",
@@ -43,7 +43,7 @@ const HomePage: GlobalConfig = {
           relationTo: "media",
           required: true,
         },
-      ]
+      ],
     },
     {
       name: "fourthSection",
@@ -67,8 +67,20 @@ const HomePage: GlobalConfig = {
           relationTo: "media",
           required: true,
         },
-      ]
-    }
+      ],
+    },
+    {
+      name: "fifthSection",
+      type: "group",
+      fields: [
+        {
+          name: "featuredImage",
+          type: "upload",
+          relationTo: "media",
+          required: true,
+        },
+      ],
+    },
   ],
 };
 

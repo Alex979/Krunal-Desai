@@ -8,6 +8,7 @@ import Imgix from "@/components/Imgix";
 import Link from "next/link";
 import BodyText from "@/components/BodyText";
 import InstagramEmbed from "@/components/InstagramEmbed";
+import NewsletterForm from "@/components/NewsletterForm";
 
 const libreBaskerville = Libre_Baskerville({
   subsets: ["latin"],
@@ -42,6 +43,10 @@ export default async function Home() {
   }
 
   if (typeof homePage.fourthSection.galleryPhoto === "string") {
+    return;
+  }
+
+  if (typeof homePage.fifthSection.featuredImage === "string") {
     return;
   }
 
@@ -125,13 +130,13 @@ export default async function Home() {
       >
         <div
           className={
-            "w-full h-1/2 flex items-center justify-center flex-col text-slate-600 md:text-white " +
+            "w-full h-1/2 flex items-center justify-center flex-col text-slate-600 md:text-gray-800 " +
             libreBaskerville.className
           }
         >
-          <div className="flex flex-col md:flex-row items-center justify-center px-10 py-12 md:mb-20">
+          <div className="flex flex-col md:flex-row items-center justify-center px-10 py-12 md:mb-64">
             <Imgix
-              className="rounded-full border-2 border-slate-500 md:border-white shadow-md md:shadow-none w-28 md:w-40 md:mr-10"
+              className="rounded-full border-2 border-slate-500 md:border-gray-800 shadow-md md:shadow-none w-28 md:w-40 md:mr-10"
               src={homePage.thirdSection.portraitPhoto.filename!}
               alt={homePage.thirdSection.portraitPhoto.alt}
               blurDataURL={homePage.thirdSection.portraitPhoto.blurDataUrl!}
@@ -170,7 +175,7 @@ export default async function Home() {
         removeBgOnMobile
       >
         <div className="w-full h-full flex items-center justify-end">
-          <div className="w-full xl:w-1/2 xl:pl-40 xl:pr-20">
+          <div className="w-full xl:w-1/2 flex justify-center">
             <div className="w-full md:max-w-md m-auto xl:m-0">
               <div
                 className={
@@ -186,7 +191,6 @@ export default async function Home() {
                     blurDataURL={homePage.fourthSection.blogPhoto.blurDataUrl!}
                     fill
                     style={{ objectFit: "cover" }}
-                    square
                     sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 33vw"
                   />
                 </div>
@@ -227,6 +231,48 @@ export default async function Home() {
       <div className="container mx-auto my-16">
         <InstagramEmbed />
       </div>
+      <ImageSection
+        image={homePage.fifthSection.featuredImage}
+        noTopPadding
+        bgClassName=""
+      >
+        <div className="w-full h-full flex items-center justify-center flex-col">
+          <h1 className="text-4xl md:text-5xl my-6 md:my-10 text-white font-bold text-center">
+            Join My Newsletter
+          </h1>
+          <NewsletterForm />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+        </div>
+      </ImageSection>
     </main>
   );
 }

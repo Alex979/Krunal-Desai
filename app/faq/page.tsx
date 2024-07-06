@@ -14,7 +14,7 @@ export default async function FaqPage() {
         image={faqPage.featuredImage}
         priority
         navbar
-        bgClassName="bg-gradient-to-b from-black to-transparent to-20% opacity-30"
+        bgClassName="bg-gradient-to-b from-black to-transparent to-20% opacity-70"
       ></ImageSection>
       <div className="w-full max-w-3xl mx-auto p-12">
         <h1 className="text-4xl font-bold text-center mt-4 mb-16 leading-snug">

@@ -103,6 +103,9 @@ export interface HomePage {
     blogPhoto: string | Media;
     galleryPhoto: string | Media;
   };
+  fifthSection: {
+    featuredImage: string | Media;
+  };
   updatedAt?: string;
   createdAt?: string;
 }
