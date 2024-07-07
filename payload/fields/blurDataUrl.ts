@@ -1,4 +1,4 @@
-import type { Field } from "payload/types";
+import type { Field } from "payload";
 
 const BlurDataUrl: Field = {
   name: "blurDataUrl",
@@ -9,9 +9,9 @@ const BlurDataUrl: Field = {
   hooks: {
     beforeChange: [
       async ({ req }) => {
-        if (req.files.file !== undefined) {
+        if (req.file !== undefined) {
           const { getPlaiceholder } = await import("plaiceholder");
-          const { base64 } = await getPlaiceholder(req.files.file.data, {
+          const { base64 } = await getPlaiceholder(req.file.data, {
             size: 10,
           });
           return base64;

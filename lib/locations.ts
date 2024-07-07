@@ -1,15 +1,19 @@
 import "server-only";
 import { Location, Sublocations } from "@/payload/payload-types";
-import { getPayloadClient } from "@/payload/payloadClient";
+import { getPayload } from "payload";
+import configPromise from "../payload/payload.config";
 
-export type Sublocation = Sublocations[number];
+type Sublocation = Exclude<Sublocations, null>[number];
 
 export interface SublocationWithLocationSlug extends Sublocation {
   locationSlug: string;
 }
 
 export async function getLocation(slug: string): Promise<Location> {
-  const payload = await getPayloadClient();
+  const payload = await getPayload({
+    config: configPromise,
+  });
+
   const result = await payload.find({
     collection: "locations",
     depth: 1,
@@ -25,7 +29,10 @@ export async function getLocation(slug: string): Promise<Location> {
 }
 
 export async function getLocations(): Promise<Location[]> {
-  const payload = await getPayloadClient();
+  const payload = await getPayload({
+    config: configPromise,
+  });
+
   const result = await payload.find({
     collection: "locations",
     depth: 1,
@@ -39,7 +46,7 @@ export async function getAllSublocations(): Promise<
 > {
   const locations = await getLocations();
   return locations.reduce((acc: SublocationWithLocationSlug[], location) => {
-    if (location.sublocations !== undefined) {
+    if (location.sublocations) {
       return acc.concat(
         location.sublocations.map((sublocation) => {
           return {

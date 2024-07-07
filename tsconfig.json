@@ -21,6 +21,9 @@
     ],
     "paths": {
       "@/*": ["./*"],
+      "@payload-config": [
+        "./payload/payload.config.ts"
+      ],
       "payload/generated-types": [
         "./payload/payload-types.ts" // Ensure this matches the path to your typescript outputFile
       ]

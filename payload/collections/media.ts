@@ -1,10 +1,9 @@
-import { CollectionConfig } from "payload/types";
+import { CollectionConfig } from "payload";
 import BlurDataUrl from "../fields/blurDataUrl";
 
 const Media: CollectionConfig = {
   slug: "media",
   upload: {
-    staticURL: "https://krunal-desai.imgix.net",
     mimeTypes: ["image/*"],
     disableLocalStorage: true,
     adminThumbnail: ({ doc }) => {

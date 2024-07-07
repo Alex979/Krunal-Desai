@@ -1,8 +1,12 @@
 import { BlogPost } from "@/payload/payload-types";
-import getPayloadClient from "@/payload/payloadClient";
+import { getPayload } from "payload";
+import configPromise from "../payload/payload.config";
 
 export async function getBlogPosts(): Promise<BlogPost[]> {
-  const payload = await getPayloadClient();
+  const payload = await getPayload({
+    config: configPromise,
+  });
+
   const result = await payload.find({
     collection: "blog-posts",
     depth: 1,
@@ -12,7 +16,10 @@ export async function getBlogPosts(): Promise<BlogPost[]> {
 }
 
 export async function getBlogPost(slug: string): Promise<BlogPost> {
-  const payload = await getPayloadClient();
+  const payload = await getPayload({
+    config: configPromise,
+  });
+
   const result = await payload.find({
     collection: "blog-posts",
     depth: 1,

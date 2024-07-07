@@ -1,5 +1,4 @@
-import { CollectionConfig } from "payload/types";
-import { RowLabelArgs } from "payload/dist/admin/components/forms/RowLabel/types";
+import { CollectionConfig } from "payload";
 import Slug from "../fields/slug";
 
 const Location: CollectionConfig = {
@@ -59,7 +58,7 @@ const Location: CollectionConfig = {
       ],
       admin: {
         components: {
-          RowLabel: ({ data, index }: RowLabelArgs) => {
+          RowLabel: ({ data, index }) => {
             return data?.title || `Sublocation ${index}`;
           },
         },
