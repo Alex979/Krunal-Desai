@@ -116,7 +116,9 @@ export default async function Home() {
             fill
             style={{ objectFit: "cover" }}
             placeholder="blur"
-            blurDataURL={homePage.secondSection.featuredImage.blurDataUrl}
+            blurDataURL={
+              homePage.secondSection.featuredImage.blurDataUrl || undefined
+            }
             sizes="100vw"
           />
         </div>
@@ -139,7 +141,9 @@ export default async function Home() {
               className="rounded-full border-2 border-slate-500 md:border-gray-800 shadow-md md:shadow-none w-28 md:w-40 md:mr-10"
               src={homePage.thirdSection.portraitPhoto.filename!}
               alt={homePage.thirdSection.portraitPhoto.alt}
-              blurDataURL={homePage.thirdSection.portraitPhoto.blurDataUrl!}
+              blurDataURL={
+                homePage.thirdSection.portraitPhoto.blurDataUrl || undefined
+              }
               width={200}
               height={200}
               square
@@ -188,7 +192,9 @@ export default async function Home() {
                     className="md:p-5"
                     src={homePage.fourthSection.blogPhoto.filename!}
                     alt={homePage.fourthSection.blogPhoto.alt}
-                    blurDataURL={homePage.fourthSection.blogPhoto.blurDataUrl!}
+                    blurDataURL={
+                      homePage.fourthSection.blogPhoto.blurDataUrl || undefined
+                    }
                     fill
                     style={{ objectFit: "cover" }}
                     sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 33vw"
@@ -206,7 +212,8 @@ export default async function Home() {
                     src={homePage.fourthSection.galleryPhoto.filename!}
                     alt={homePage.fourthSection.galleryPhoto.alt}
                     blurDataURL={
-                      homePage.fourthSection.galleryPhoto.blurDataUrl!
+                      homePage.fourthSection.galleryPhoto.blurDataUrl ||
+                      undefined
                     }
                     fill
                     style={{ objectFit: "cover" }}

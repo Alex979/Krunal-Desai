@@ -28,7 +28,7 @@ export default async function Gallery({
                 src={photo.image.filename!}
                 alt={photo.image.alt}
                 placeholder="blur"
-                blurDataURL={photo.image.blurDataUrl}
+                blurDataURL={photo.image.blurDataUrl || undefined}
                 fill
                 style={{ objectFit: "cover" }}
                 sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, (max-width: 1536px) 33vw, 25vw"
@@ -42,7 +42,7 @@ export default async function Gallery({
       return (
         <div
           key={sublocationIndex}
-          id={sublocation.slug}
+          id={sublocation.slug || undefined}
           className="mx-auto my-2 px-3 md:px-16 lg:px-24 2xl:px-32"
         >
           <div className="grid gap-2 grid-cols-1 lg:grid-cols-3 2xl:grid-cols-4">

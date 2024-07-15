@@ -1,7 +1,7 @@
 import Imgix from "@/components/Imgix";
 import { Media } from "@/payload/payload-types";
 import Link from "next/link";
-import { BlogPost } from "@/payload/payload-types";
+import type { BlogPost } from "@/payload/payload-types";
 
 export default function BlogPost({ blogPost }: { blogPost: BlogPost }) {
   if (typeof blogPost.featuredImage === "string") {
@@ -18,7 +18,7 @@ export default function BlogPost({ blogPost }: { blogPost: BlogPost }) {
           fill
           style={{ objectFit: "cover" }}
           placeholder="blur"
-          blurDataURL={blogPost.featuredImage.blurDataUrl}
+          blurDataURL={blogPost.featuredImage.blurDataUrl || undefined}
           sizes="33vw"
         />
       </div>

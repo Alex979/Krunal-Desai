@@ -44,13 +44,17 @@ export default function ImageSection({
         {navbar && <Navbar theme="light" />}
         {image && (
           <Imgix
-            className={"absolute inset-0 select-none -z-10" + (removeBgOnMobile ? " hidden md:block" : "") + (objectPosition ? ` ${objectPosition}` : "")}
+            className={
+              "absolute inset-0 select-none -z-10" +
+              (removeBgOnMobile ? " hidden md:block" : "") +
+              (objectPosition ? ` ${objectPosition}` : "")
+            }
             src={image.filename!}
             alt={image.alt}
             fill
             style={{ objectFit: "cover" }}
             placeholder="blur"
-            blurDataURL={image.blurDataUrl}
+            blurDataURL={image.blurDataUrl || undefined}
             priority={priority}
             sizes={`(max-aspect-ratio: ${image.width!}/${
               halfHeight ? image.height! * 2 : image.height!
@@ -61,7 +65,13 @@ export default function ImageSection({
             )}vh, 100vw`}
           />
         )}
-        <div className={"absolute inset-0 -z-10 " + bgClassName + (removeBgOnMobile ? " hidden md:block" : "")}></div>
+        <div
+          className={
+            "absolute inset-0 -z-10 " +
+            bgClassName +
+            (removeBgOnMobile ? " hidden md:block" : "")
+          }
+        ></div>
         <div className="w-full h-full">{children}</div>
       </div>
     </div>

@@ -18,7 +18,7 @@ export default function MapMarker({
           src={sublocation.mapThumbnail.filename!}
           alt={sublocation.mapThumbnail.alt}
           placeholder="blur"
-          blurDataURL={sublocation.mapThumbnail.blurDataUrl}
+          blurDataURL={sublocation.mapThumbnail.blurDataUrl || undefined}
           width={128}
           height={128}
           square
