@@ -13,7 +13,7 @@ interface BodyTextProps {
 
 export default function BodyText({ children, className } : BodyTextProps) {
   return (
-    <p className={"text-sm md:text-xl leading-loose md:leading-loose " + libreBaskerville.className + " " + className}>
+    <p className={"text-sm md:text-lg leading-loose md:leading-loose " + libreBaskerville.className + " " + className}>
       {children}
     </p>
   )
