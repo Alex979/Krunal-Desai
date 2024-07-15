@@ -130,11 +130,11 @@ export default async function Home() {
       >
         <div
           className={
-            "w-full h-1/2 flex items-center justify-center flex-col text-slate-600 md:text-gray-800 " +
+            "w-full flex items-center justify-center flex-col text-slate-600 md:text-gray-800 " +
             libreBaskerville.className
           }
         >
-          <div className="flex flex-col md:flex-row items-center justify-center px-10 py-12 md:mb-64">
+          <div className="flex flex-col md:flex-row items-center justify-center px-10 py-12">
             <Imgix
               className="rounded-full border-2 border-slate-500 md:border-gray-800 shadow-md md:shadow-none w-28 md:w-40 md:mr-10"
               src={homePage.thirdSection.portraitPhoto.filename!}
@@ -144,7 +144,7 @@ export default async function Home() {
               height={200}
               square
             />
-            <BodyText className="mt-8 max-w-2xl md:font-bold">
+            <BodyText className="mt-8 md:m-0 max-w-2xl md:font-bold">
               Since my youth, marveling at the natural world and being so
               fortunate to be able to observe wildlife in their breathtaking
               habitats has instilled a sense of reverence for the pristine
@@ -228,49 +228,21 @@ export default async function Home() {
           </div>
         </div>
       </ImageSection>
-      <div className="container mx-auto my-16">
-        <InstagramEmbed />
-      </div>
+      <ImageSection noTopPadding variableHeightOnMobile>
+        <div className="w-full h-full flex items-center justify-center">
+          <InstagramEmbed />
+        </div>
+      </ImageSection>
       <ImageSection
         image={homePage.fifthSection.featuredImage}
         noTopPadding
         bgClassName=""
       >
-        <div className="w-full h-full flex items-center justify-center flex-col">
+        <div className="w-full flex items-center justify-center flex-col pt-10">
           <h1 className="text-4xl md:text-5xl my-6 md:my-10 text-white font-bold text-center">
             Join My Newsletter
           </h1>
           <NewsletterForm />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
         </div>
       </ImageSection>
     </main>
