@@ -1,25 +1,22 @@
 import ImageSection from "@/components/ImageSection";
-import { getBiographyPage } from "@/lib/globals";
-import fancyDividerDark from "@/images/fancy-divider-dark.png";
-import fancyDividerLight from "@/images/fancy-divider-light.png";
+import { getBiographyPage, getFaqPage } from "@/lib/globals";
 import featherIconDark from "@/images/feather-icon-dark.png";
 import Image from "next/image";
 import BodyText from "@/components/BodyText";
-import { Libre_Baskerville } from "next/font/google";
-
-const libreBaskerville = Libre_Baskerville({
-  subsets: ["latin"],
-  weight: ["400", "700"],
-});
 
 export default async function BiographyPage() {
   const biographyPage = await getBiographyPage();
+  const faqPage = await getFaqPage();
 
   if (typeof biographyPage.featuredImage === "string") {
     return;
   }
 
   if (typeof biographyPage.conservationSection.image === "string") {
+    return;
+  }
+
+  if (typeof faqPage.featuredImage === "string") {
     return;
   }
 
@@ -31,49 +28,71 @@ export default async function BiographyPage() {
         navbar
         bgClassName="bg-gradient-to-b from-black to-transparent to-20% opacity-30"
       ></ImageSection>
-      <ImageSection noTopPadding bgClassName="" variableHeightOnMobile>
-        <div className="w-full h-full flex justify-center items-center">
-          <div className="w-full max-w-3xl p-12 space-y-8">
-            <Image
-              src={featherIconDark}
-              width={150}
-              alt="feather icon"
-              className="mx-auto"
-            />
-            <BodyText className="text-justify">{biographyPage.biographyText}</BodyText>
-            <Image
-              src={featherIconDark}
-              width={150}
-              alt="feather icon"
-              className="mx-auto rotate-180"
-            />
-          </div>
-        </div>
-      </ImageSection>
+      <div className="w-full max-w-3xl mx-auto p-12 space-y-8 my-10">
+        <Image
+          src={featherIconDark}
+          width={150}
+          alt="feather icon"
+          className="mx-auto"
+        />
+        <BodyText className="text-justify">
+          {biographyPage.biographyText}
+        </BodyText>
+        <Image
+          src={featherIconDark}
+          width={150}
+          alt="feather icon"
+          className="mx-auto rotate-180"
+        />
+      </div>
       <ImageSection
         noTopPadding
         image={biographyPage.conservationSection.image}
         bgClassName=""
+        halfHeight
       ></ImageSection>
-      <ImageSection noTopPadding bgClassName="" variableHeightOnMobile>
-        <div className="w-full h-full flex justify-center items-center">
-          <div className="w-full max-w-3xl p-12 space-y-8">
-            <Image
-              src={featherIconDark}
-              width={150}
-              alt="feather icon"
-              className="mx-auto"
-            />
-            <BodyText className="text-justify">{biographyPage.conservationSection.text}</BodyText>
-            <Image
-              src={featherIconDark}
-              width={150}
-              alt="feather icon"
-              className="mx-auto rotate-180"
-            />
-          </div>
+      <div className="w-full max-w-3xl mx-auto p-12 space-y-8 my-10">
+        <Image
+          src={featherIconDark}
+          width={150}
+          alt="feather icon"
+          className="mx-auto"
+        />
+        <BodyText className="text-justify">
+          {biographyPage.conservationSection.text}
+        </BodyText>
+        <Image
+          src={featherIconDark}
+          width={150}
+          alt="feather icon"
+          className="mx-auto rotate-180"
+        />
+      </div>
+      <ImageSection
+        noTopPadding
+        image={faqPage.featuredImage}
+        bgClassName=""
+        halfHeight
+      ></ImageSection>
+      <div className="w-full max-w-3xl mx-auto p-12">
+        <h1 className="text-3xl md:text-4xl font-bold text-center mt-4 mb-16 leading-snug">
+          Frequently Asked Questions
+        </h1>
+        <div className="space-y-16">
+          {faqPage.faqs?.map((faq, index) => {
+            return (
+              <div key={index}>
+                <h1 className="text-2xl md:text-3xl font-bold leading-snug my-4">
+                  {faq.question}
+                </h1>
+                <BodyText className="text-justify">
+                  {faq.answer}
+                </BodyText>
+              </div>
+            );
+          })}
         </div>
-      </ImageSection>
+      </div>
     </main>
   );
 }
