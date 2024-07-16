@@ -13,6 +13,7 @@ import FaqPage from "./globals/faqPage";
 import GalleryPage from "./globals/galleryPage";
 import { lexicalEditor } from "@payloadcms/richtext-lexical";
 import { fileURLToPath } from "url";
+import Newsletter from "./globals/newsletter";
 
 const filename = fileURLToPath(import.meta.url);
 const dirname = path.dirname(filename);
@@ -31,6 +32,7 @@ export default buildConfig({
     BlogPage,
     FaqPage,
     GalleryPage,
+    Newsletter,
   ],
   upload: {
     limits: {

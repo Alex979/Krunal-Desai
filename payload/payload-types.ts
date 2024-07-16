@@ -50,6 +50,7 @@ export interface Config {
     'blog-page': BlogPage;
     'faq-page': FaqPage;
     'gallery-page': GalleryPage;
+    newsletter: Newsletter;
   };
   locale: null;
   user: User & {
@@ -202,7 +203,7 @@ export interface HomePage {
     blogPhoto: string | Media;
     galleryPhoto: string | Media;
   };
-  fifthSection: {
+  instagramBackground: {
     featuredImage: string | Media;
   };
   updatedAt?: string | null;
@@ -267,6 +268,16 @@ export interface FaqPage {
 export interface GalleryPage {
   id: string;
   locations: (string | Location)[];
+  updatedAt?: string | null;
+  createdAt?: string | null;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "newsletter".
+ */
+export interface Newsletter {
+  id: string;
+  backgroundImage: string | Media;
   updatedAt?: string | null;
   createdAt?: string | null;
 }

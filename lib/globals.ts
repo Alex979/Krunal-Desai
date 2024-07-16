@@ -5,6 +5,7 @@ import {
   FaqPage,
   GalleryPage,
   HomePage,
+  Newsletter,
 } from "@/payload/payload-types";
 import { getPayload } from "payload";
 import configPromise from "../payload/payload.config";
@@ -77,6 +78,18 @@ export async function getGalleryPage(): Promise<GalleryPage> {
   const result = await payload.findGlobal({
     slug: "gallery-page",
     depth: 2,
+  });
+  return result;
+}
+
+export async function getNewsletter(): Promise<Newsletter> {
+  const payload = await getPayload({
+    config: configPromise,
+  });
+  
+  const result = await payload.findGlobal({
+    slug: "newsletter",
+    depth: 1,
   });
   return result;
 }

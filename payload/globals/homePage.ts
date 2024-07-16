@@ -70,7 +70,7 @@ const HomePage: GlobalConfig = {
       ],
     },
     {
-      name: "fifthSection",
+      name: "instagramBackground",
       type: "group",
       fields: [
         {

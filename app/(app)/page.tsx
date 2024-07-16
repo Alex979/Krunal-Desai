@@ -8,7 +8,7 @@ import Imgix from "@/components/Imgix";
 import Link from "next/link";
 import BodyText from "@/components/BodyText";
 import InstagramEmbed from "@/components/InstagramEmbed";
-import NewsletterForm from "@/components/NewsletterForm";
+import NewsletterSection from "@/components/NewsletterSection";
 
 const libreBaskerville = Libre_Baskerville({
   subsets: ["latin"],
@@ -46,7 +46,7 @@ export default async function Home() {
     return;
   }
 
-  if (typeof homePage.fifthSection.featuredImage === "string") {
+  if (typeof homePage.instagramBackground.featuredImage === "string") {
     return;
   }
 
@@ -235,23 +235,17 @@ export default async function Home() {
           </div>
         </div>
       </ImageSection>
-      <ImageSection noTopPadding variableHeightOnMobile>
+      <ImageSection
+        image={homePage.instagramBackground.featuredImage}
+        noTopPadding
+        variableHeightOnMobile
+        bgClassName=""
+      >
         <div className="w-full h-full flex items-center justify-center">
           <InstagramEmbed />
         </div>
       </ImageSection>
-      <ImageSection
-        image={homePage.fifthSection.featuredImage}
-        noTopPadding
-        bgClassName=""
-      >
-        <div className="w-full flex items-center justify-center flex-col pt-10">
-          <h1 className="text-4xl md:text-5xl my-6 md:my-10 text-white font-bold text-center">
-            Join My Newsletter
-          </h1>
-          <NewsletterForm />
-        </div>
-      </ImageSection>
+      <NewsletterSection />
     </main>
   );
 }
