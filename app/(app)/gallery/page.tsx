@@ -29,8 +29,13 @@ export default async function GalleryHome() {
             noTopPadding={locationIndex !== 0}
             bgClassName={"bg-black opacity-10"}
           >
-            <Link href={`/gallery/${location.slug}`} className="w-full h-full flex items-center justify-center text-white p-3 hover:scale-105 transition">
-              <h1 className="text-5xl md:text-7xl lg:text-8xl 2xl:text-9xl text-center">{location.title.toUpperCase()}</h1>
+            <Link
+              href={`/gallery/${location.slug}`}
+              className="w-full h-full flex items-end justify-center text-white p-3 hover:scale-105 transition"
+            >
+              <h1 className="text-5xl md:text-7xl lg:text-8xl 2xl:text-9xl text-center mb-10">
+                {location.title.toUpperCase()}
+              </h1>
             </Link>
           </ImageSection>
         );
