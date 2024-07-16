@@ -6,15 +6,27 @@ const libreBaskerville = Libre_Baskerville({
   weight: ["400", "700"],
 });
 
-interface BodyTextProps {
+interface BodyTextProps extends React.HTMLProps<HTMLParagraphElement> {
   children?: ReactNode;
   className?: string | undefined;
 }
 
-export default function BodyText({ children, className } : BodyTextProps) {
+export default function BodyText({
+  children,
+  className,
+  ...props
+}: BodyTextProps) {
   return (
-    <p className={"text-sm md:text-lg leading-loose md:leading-loose " + libreBaskerville.className + " " + className}>
+    <p
+      className={
+        "text-sm md:text-lg leading-loose md:leading-loose " +
+        libreBaskerville.className +
+        " " +
+        className
+      }
+      {...props}
+    >
       {children}
     </p>
-  )
+  );
 }
