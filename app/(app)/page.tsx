@@ -194,7 +194,7 @@ export default async function Home() {
                 >
                   <div className="w-full aspect-[3/2] relative">
                     <Imgix
-                      className="md:p-5"
+                      className="p-3 md:p-5"
                       src={homePage.fourthSection.blogPhoto.filename!}
                       alt={homePage.fourthSection.blogPhoto.alt}
                       blurDataURL={
@@ -216,7 +216,7 @@ export default async function Home() {
                   </div>
                   <div className="w-full aspect-[3/2] relative">
                     <Imgix
-                      className="md:p-5"
+                      className="p-3 md:p-5"
                       src={homePage.fourthSection.galleryPhoto.filename!}
                       alt={homePage.fourthSection.galleryPhoto.alt}
                       blurDataURL={
@@ -243,6 +243,20 @@ export default async function Home() {
                 </div>
               </div>
             </div>
+          </div>
+          <div className="w-full aspect-[3/2] relative md:hidden">
+            <Imgix
+              className=""
+              src={homePage.fourthSection.featuredImage.filename!}
+              alt={homePage.fourthSection.featuredImage.alt}
+              fill
+              style={{ objectFit: "cover" }}
+              placeholder="blur"
+              blurDataURL={
+                homePage.fourthSection.featuredImage.blurDataUrl || undefined
+              }
+              sizes="100vw"
+            />
           </div>
         </ImageSection>
         <ImageSection
