@@ -45,12 +45,6 @@ export default function Navbar({ theme }: NavbarProps) {
             Biography
           </Link>
           <Link
-            href="/blog"
-            className="text-white hover:text-gray-300 transition text-lg"
-          >
-            Blog
-          </Link>
-          <Link
             href="/contact"
             className="text-white hover:text-gray-300 transition text-lg"
           >
@@ -118,9 +112,6 @@ export default function Navbar({ theme }: NavbarProps) {
           </Link>
           <Link href="/biography" className="text-slate-600 text-3xl">
             Biography
-          </Link>
-          <Link href="/blog" className="text-slate-600 text-3xl">
-            Blog
           </Link>
           <Link href="/contact" className="text-slate-600 text-3xl">
             Contact
