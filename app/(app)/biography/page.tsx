@@ -28,21 +28,21 @@ export default async function BiographyPage() {
         navbar
         bgClassName="bg-gradient-to-b from-black to-transparent to-20% opacity-30"
       ></ImageSection>
-      <div className="w-full max-w-3xl mx-auto p-12 space-y-8 my-10">
+      <div className="w-full max-w-3xl mx-auto p-8 space-y-8 my-10">
         <Image
           src={featherIconDark}
           width={150}
           alt="feather icon"
-          className="mx-auto"
+          className="mx-auto w-20 md:w-36"
         />
-        <BodyText className="text-justify">
+        <BodyText className="md:text-justify">
           {biographyPage.biographyText}
         </BodyText>
         <Image
           src={featherIconDark}
           width={150}
           alt="feather icon"
-          className="mx-auto rotate-180"
+          className="mx-auto rotate-180 w-20 md:w-36"
         />
       </div>
       <ImageSection
@@ -51,21 +51,21 @@ export default async function BiographyPage() {
         bgClassName=""
         halfHeight
       ></ImageSection>
-      <div className="w-full max-w-3xl mx-auto p-12 space-y-8 my-10">
+      <div className="w-full max-w-3xl mx-auto p-8 space-y-8 my-10">
         <Image
           src={featherIconDark}
           width={150}
           alt="feather icon"
-          className="mx-auto"
+          className="mx-auto w-20 md:w-36"
         />
-        <BodyText className="text-justify">
+        <BodyText className="md:text-justify">
           {biographyPage.conservationSection.text}
         </BodyText>
         <Image
           src={featherIconDark}
           width={150}
           alt="feather icon"
-          className="mx-auto rotate-180"
+          className="mx-auto rotate-180 w-20 md:w-36"
         />
       </div>
       <ImageSection
@@ -74,8 +74,8 @@ export default async function BiographyPage() {
         bgClassName=""
         halfHeight
       ></ImageSection>
-      <div className="w-full max-w-3xl mx-auto p-12">
-        <h1 className="text-3xl md:text-4xl font-bold text-center mt-4 mb-16 leading-snug">
+      <div className="w-full max-w-3xl mx-auto p-8">
+        <h1 className="text-3xl md:text-4xl font-bold text-center mt-8 mb-16 leading-snug">
           Frequently Asked Questions
         </h1>
         <div className="space-y-16">
@@ -85,7 +85,7 @@ export default async function BiographyPage() {
                 <h1 className="text-2xl md:text-3xl font-bold leading-snug my-4">
                   {faq.question}
                 </h1>
-                <BodyText className="text-justify">
+                <BodyText className="md:text-justify">
                   {faq.answer}
                 </BodyText>
               </div>
