@@ -6,7 +6,6 @@ import Link from "next/link";
 export default async function GalleryHome() {
   const locations = await getLocations();
   const galleryPage = await getGalleryPage();
-  console.log(galleryPage);
 
   return (
     <main>
