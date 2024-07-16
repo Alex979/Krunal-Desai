@@ -185,7 +185,7 @@ export default async function Home() {
         >
           <div className="w-full h-full flex items-center justify-end">
             <div className="w-full xl:w-1/2 flex justify-center">
-              <div className="w-full md:max-w-md m-auto xl:m-0">
+              <div className="w-full md:max-w-md m-auto xl:m-0" data-aos="fade">
                 <div
                   className={
                     "bg-stone-100 text-slate-600 md:shadow-xl " +
@@ -264,6 +264,7 @@ export default async function Home() {
           noTopPadding
           variableHeightOnMobile
           bgClassName=""
+          removeBgOnMobile
         >
           <div className="w-full h-full flex items-center justify-center">
             <InstagramEmbed />

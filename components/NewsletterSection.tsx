@@ -18,7 +18,7 @@ export default async function NewsletterSection() {
       variableHeightOnMobile
       removeBgOnMobile
     >
-      <div className="w-full flex items-center justify-center flex-col py-10">
+      <div className="w-full flex items-center justify-center flex-col py-10" data-aos="fade">
         <h1 className="text-4xl md:text-5xl my-6 md:my-10 md:text-white font-bold text-center">
           Join My Newsletter
         </h1>
