@@ -62,12 +62,15 @@ export default async function Home() {
         >
           <div className="w-full h-full flex items-center justify-center text-white">
             <div className="h-1/2 flex flex-col items-center justify-between mt-20">
-              <div className="space-y-3 flex flex-col items-center text-shadow-lg text-center mx-5">
+              <div
+                data-aos="fade" data-aos-delay="0"
+                className="space-y-3 flex flex-col items-center text-shadow-lg text-center mx-5"
+              >
                 <h1 className=" text-4xl sm:text-5xl">KRUNAL DESAI</h1>
                 <Image src={fancySeparator} alt="separator" width={380} />
                 <h1 className="text-2xl sm:text-3xl">Wildlife Photographer</h1>
               </div>
-              <div className="text-center">
+              <div className="text-center" data-aos="fade" data-aos-delay="300">
                 <p>SCROLL</p>
                 <Image
                   className="mx-auto w-6 mt-2"
@@ -85,7 +88,7 @@ export default async function Home() {
           removeBgOnMobile
           bgClassName="bg-gradient-to-t from-white to-transparent to-40% opacity-50"
         >
-          <div className="w-full h-full flex flex-col items-center justify-between text-center py-12">
+          <div className="w-full h-full flex flex-col items-center justify-between text-center py-12" data-aos="fade">
             <BodyText className="mx-10 md:font-bold">
               My travels began at the blossoming of such primordial valleys,
               <br />
@@ -138,7 +141,7 @@ export default async function Home() {
               libreBaskerville.className
             }
           >
-            <div className="flex flex-col md:flex-row items-center justify-center px-10 py-12">
+            <div className="flex flex-col md:flex-row items-center justify-center px-10 py-12" data-aos="fade">
               <Imgix
                 className="rounded-full border-2 border-slate-500 md:border-gray-800 shadow-md md:shadow-none w-28 md:w-40 md:mr-10"
                 src={homePage.thirdSection.portraitPhoto.filename!}

@@ -10,7 +10,7 @@ export default function AosTemplate({
   children: React.ReactNode;
 }) {
   useEffect(() => {
-    AOS.init();
+    AOS.init({ duration: 1000, delay: 100 });
   }, []);
 
   return <>{children}</>;
