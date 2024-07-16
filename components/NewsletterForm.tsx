@@ -68,21 +68,21 @@ export default function NewsletterForm() {
       className="w-full max-w-xs md:max-w-md"
     >
       <input
-        className="border-slate-100 border p-2 my-4 block rounded-md w-full"
+        className="border-slate-300 border p-2 my-4 block rounded-md w-full"
         type="text"
         name="first_name"
         aria-label="First Name"
         placeholder="First Name"
       />
       <input
-        className="border-slate-100 border p-2 my-4 block rounded-md w-full"
+        className="border-slate-300 border p-2 my-4 block rounded-md w-full"
         type="text"
         name="last_name"
         aria-label="Last Name"
         placeholder="Last Name"
       />
       <input
-        className="border-slate-100 border p-2 my-4 block rounded-md w-full"
+        className="border-slate-300 border p-2 my-4 block rounded-md w-full"
         type="email"
         name="email"
         aria-label="Email Address"
