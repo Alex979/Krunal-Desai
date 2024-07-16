@@ -19,6 +19,7 @@
     "@payloadcms/richtext-lexical": "^3.0.0-beta.58",
     "@payloadcms/storage-s3": "^3.0.0-beta.58",
     "@types/node": "20.3.0",
+    "aos": "^2.3.4",
     "autoprefixer": "10.4.14",
     "eslint": "8.42.0",
     "eslint-config-next": "^15.0.0-rc.0",
@@ -37,6 +38,7 @@
     "typescript": "^5.5.3"
   },
   "devDependencies": {
+    "@types/aos": "^3.0.7",
     "@types/escape-html": "^1.0.4",
     "@types/mapbox-gl": "^2.7.11",
     "@types/react-dom": "^18.3.0",
