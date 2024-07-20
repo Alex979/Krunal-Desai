@@ -17,18 +17,11 @@ export default async function ContactPage() {
         objectPosition="object-[37%_center]"
         bgClassName="bg-gradient-to-b from-black to-transparent to-20% opacity-50"
       />
-      <ImageSection
-        noTopPadding
-        bgClassName="bg-stone-100"
-        halfHeight
-        variableHeightOnMobile
-      >
-        <div className="w-full h-full flex flex-col justify-center items-center text-slate-600 py-20">
-          <div className="w-full max-w-lg px-16">
-            <ContactForm />
-          </div>
+      <div className="w-full flex flex-col justify-center items-center text-slate-600 py-12">
+        <div className="w-full max-w-lg px-16">
+          <ContactForm />
         </div>
-      </ImageSection>
+      </div>
     </main>
   );
 }
