@@ -185,16 +185,16 @@ export default async function Home() {
         >
           <div className="w-full h-full flex items-center justify-end">
             <div className="w-full xl:w-1/2 flex justify-center">
-              <div className="w-full md:max-w-md m-auto xl:m-0" data-aos="fade">
+              <div className="w-full md:w-auto m-auto xl:m-0 bg-red-500" data-aos="fade">
                 <div
                   className={
                     "bg-stone-100 text-slate-600 md:shadow-xl " +
                     libreBaskerville.className
                   }
                 >
-                  <div className="w-full aspect-[3/2] relative">
+                  <div className="w-full md:w-[38vh] aspect-[3/2] relative">
                     <Imgix
-                      className="p-3 md:p-5"
+                      className="p-3"
                       src={homePage.fourthSection.blogPhoto.filename!}
                       alt={homePage.fourthSection.blogPhoto.alt}
                       blurDataURL={
@@ -206,7 +206,7 @@ export default async function Home() {
                       sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 33vw"
                     />
                   </div>
-                  <div className="py-8 px-5 text-center">
+                  <div className="pt-2 pb-5 px-3 text-center">
                     <h2 className="font-bold text-lg">
                       Experience My Journeys
                     </h2>
@@ -214,9 +214,9 @@ export default async function Home() {
                       <Link href="/">View Blog</Link>
                     </button>
                   </div>
-                  <div className="w-full aspect-[3/2] relative">
+                  <div className="w-full md:w-[38vh] aspect-[3/2] relative">
                     <Imgix
-                      className="p-3 md:p-5"
+                      className="p-3"
                       src={homePage.fourthSection.galleryPhoto.filename!}
                       alt={homePage.fourthSection.galleryPhoto.alt}
                       blurDataURL={
@@ -229,7 +229,7 @@ export default async function Home() {
                       sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 33vw"
                     />
                   </div>
-                  <div className="py-8 px-5 text-center">
+                  <div className="pt-2 pb-5 px-3 text-center">
                     <h2 className="font-bold text-lg">
                       Wilderness of the World
                     </h2>
