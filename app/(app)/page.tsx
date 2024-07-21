@@ -213,7 +213,7 @@ export default async function Home() {
                       Experience My Journeys
                     </h2>
                     <button className="border border-slate-600 hover:bg-slate-600 hover:text-stone-100 transition py-3 px-5 text-sm mt-5 mx-auto block">
-                      <Link href="/">View Blog</Link>
+                      <Link href="/map">View Map</Link>
                     </button>
                   </div>
                   <div className="w-full md:w-[38vh] aspect-[3/2] relative">
@@ -237,9 +237,6 @@ export default async function Home() {
                     </h2>
                     <button className="border border-slate-600 hover:bg-slate-600 hover:text-stone-100 transition py-3 px-5 text-sm mt-5 mx-auto block">
                       <Link href="/gallery">View Gallery</Link>
-                    </button>
-                    <button className="border border-slate-600 hover:bg-slate-600 hover:text-stone-100 transition py-3 px-5 text-sm mt-5 mx-auto block">
-                      <Link href="/map">View Map</Link>
                     </button>
                   </div>
                 </div>
