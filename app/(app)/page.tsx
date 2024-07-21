@@ -61,14 +61,14 @@ export default async function Home() {
           bgClassName="bg-gradient-to-b from-black via-transparent to-black opacity-30"
         >
           <div className="w-full h-full flex items-center justify-center text-white">
-            <div className="h-1/2 flex flex-col items-center justify-between mt-20">
+            <div className="h-3/5 max-h-[35rem] flex flex-col items-center justify-between mt-12">
               <div
                 data-aos="fade" data-aos-delay="0"
-                className="space-y-3 flex flex-col items-center text-shadow-lg text-center mx-5"
+                className="space-y-1 flex flex-col items-center text-shadow-lg text-center mx-5"
               >
-                <h1 className=" text-4xl sm:text-5xl">KRUNAL DESAI</h1>
-                <Image src={fancySeparator} alt="separator" width={380} />
-                <h1 className="text-2xl sm:text-3xl">Wildlife Photographer</h1>
+                <h1 className="text-4xl">KRUNAL DESAI</h1>
+                <Image src={fancySeparator} alt="separator" width={300} />
+                <h1 className="text-2xl">Wildlife Photographer</h1>
               </div>
               <div className="text-center" data-aos="fade" data-aos-delay="300">
                 <p>SCROLL</p>
