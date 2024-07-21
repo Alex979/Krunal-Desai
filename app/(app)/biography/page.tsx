@@ -4,6 +4,8 @@ import featherIconDark from "@/images/feather-icon-dark.png";
 import Image from "next/image";
 import BodyText from "@/components/BodyText";
 
+export const dynamic = "force-dynamic";
+
 export default async function BiographyPage() {
   const biographyPage = await getBiographyPage();
   const faqPage = await getFaqPage();
@@ -85,9 +87,7 @@ export default async function BiographyPage() {
                 <h1 className="text-2xl md:text-3xl font-bold leading-snug my-4">
                   {faq.question}
                 </h1>
-                <BodyText className="md:text-justify">
-                  {faq.answer}
-                </BodyText>
+                <BodyText className="md:text-justify">{faq.answer}</BodyText>
               </div>
             );
           })}

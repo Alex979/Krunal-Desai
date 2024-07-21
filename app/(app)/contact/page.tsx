@@ -2,6 +2,8 @@ import ContactForm from "@/components/ContactForm";
 import ImageSection from "@/components/ImageSection";
 import { getContactPage } from "@/lib/globals";
 
+export const dynamic = "force-dynamic";
+
 export default async function ContactPage() {
   const contactPage = await getContactPage();
 

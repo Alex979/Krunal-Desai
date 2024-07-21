@@ -109,10 +109,3 @@ export default async function Gallery({
     </main>
   );
 }
-
-export async function generateStaticParams() {
-  const locations = await getLocations();
-  return locations.map((location) => ({
-    slug: location.slug,
-  }));
-}
