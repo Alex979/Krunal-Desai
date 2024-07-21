@@ -51,7 +51,6 @@ export default async function BiographyPage() {
         noTopPadding
         image={biographyPage.conservationSection.image}
         bgClassName=""
-        halfHeight
       ></ImageSection>
       <div className="w-full max-w-3xl mx-auto p-8 space-y-8 my-10">
         <Image
@@ -74,7 +73,6 @@ export default async function BiographyPage() {
         noTopPadding
         image={faqPage.featuredImage}
         bgClassName=""
-        halfHeight
       ></ImageSection>
       <div className="w-full max-w-3xl mx-auto p-8">
         <h1 className="text-3xl md:text-4xl font-bold text-center mt-8 mb-16 leading-snug">
