@@ -12,21 +12,20 @@ export default async function NewsletterSection() {
 
   return (
     <>
-      <div className="md:px-3">
-        <div className="w-full flex items-center justify-center flex-col pt-10 bg-[#87a5e3]">
-          <h1 className="text-4xl md:text-5xl my-6 md:my-10 text-white font-bold text-center">
+      <ImageSection
+        image={newsletter.backgroundImage}
+        noTopPadding
+        bgClassName=""
+        objectPosition="object-[center_top]"
+        removeBgOnMobile
+        variableHeightOnMobile
+      >
+        <div className="w-full flex items-center flex-col bg-[#87a5e3] md:bg-inherit">
+          <h1 className="text-4xl mt-10 mb-6 text-white font-bold text-center">
             Join My Newsletter
           </h1>
           <NewsletterForm />
         </div>
-      </div>
-      <ImageSection
-        image={newsletter.backgroundImage}
-        noTopPadding
-        bgClassName="bg-gradient-to-b from-[#87a5e3] to-transparent to-10%"
-        removeBgOnMobile
-        variableHeightOnMobile
-      >
         <div className="w-full aspect-[3/2] relative md:hidden">
           <Imgix
             className=""
