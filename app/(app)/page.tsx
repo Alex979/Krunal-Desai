@@ -136,6 +136,7 @@ export default async function Home() {
           bgClassName=""
           variableHeightOnMobile
           removeBgOnMobile
+          objectPosition="object-[center_10%]"
         >
           <div
             className={
