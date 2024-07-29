@@ -1,4 +1,5 @@
 import ImageSection from "@/components/ImageSection";
+import NewsletterSection from "@/components/NewsletterSection";
 import { getGalleryPage } from "@/lib/globals";
 import { getLocations } from "@/lib/locations";
 import Link from "next/link";
@@ -41,6 +42,7 @@ export default async function GalleryHome() {
           </ImageSection>
         );
       })}
+      <NewsletterSection />
     </main>
   );
 }

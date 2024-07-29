@@ -3,6 +3,7 @@ import { getBiographyPage, getFaqPage } from "@/lib/globals";
 import featherIconDark from "@/images/feather-icon-dark.png";
 import Image from "next/image";
 import BodyText from "@/components/BodyText";
+import NewsletterSection from "@/components/NewsletterSection";
 
 export const dynamic = "force-dynamic";
 
@@ -91,6 +92,7 @@ export default async function BiographyPage() {
           })}
         </div>
       </div>
+      <NewsletterSection />
     </main>
   );
 }

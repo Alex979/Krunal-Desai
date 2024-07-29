@@ -3,6 +3,7 @@ import Navbar from "@/components/Navbar";
 import { getLocation, getLocations } from "@/lib/locations";
 import Imgix from "@/components/Imgix";
 import ImageSection from "@/components/ImageSection";
+import NewsletterSection from "@/components/NewsletterSection";
 
 export default async function Gallery({
   params,
@@ -106,6 +107,7 @@ export default async function Gallery({
         </div>
       </ImageSection>
       <div className="py-16 space-y-16">{sublocations}</div>
+      <NewsletterSection />
     </main>
   );
 }
