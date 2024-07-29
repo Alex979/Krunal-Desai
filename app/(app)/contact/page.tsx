@@ -25,7 +25,6 @@ export default async function ContactPage() {
           <ContactForm />
         </div>
       </div>
-      <NewsletterSection />
     </main>
   );
 }

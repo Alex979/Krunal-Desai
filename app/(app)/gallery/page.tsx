@@ -42,7 +42,6 @@ export default async function GalleryHome() {
           </ImageSection>
         );
       })}
-      <NewsletterSection />
     </main>
   );
 }

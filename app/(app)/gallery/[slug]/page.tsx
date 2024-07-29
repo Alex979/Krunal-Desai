@@ -107,7 +107,6 @@ export default async function Gallery({
         </div>
       </ImageSection>
       <div className="py-16 space-y-16">{sublocations}</div>
-      <NewsletterSection />
     </main>
   );
 }
