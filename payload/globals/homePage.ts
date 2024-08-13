@@ -1,3 +1,4 @@
+import { revalidatePath } from "next/cache";
 import { GlobalConfig } from "payload";
 
 const HomePage: GlobalConfig = {
@@ -82,6 +83,13 @@ const HomePage: GlobalConfig = {
       ],
     },
   ],
+  hooks: {
+    afterChange: [
+      async () => {
+        revalidatePath("/");
+      },
+    ],
+  },
 };
 
 export default HomePage;

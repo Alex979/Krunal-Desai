@@ -11,8 +11,6 @@ import InstagramEmbed from "@/components/InstagramEmbed";
 import NewsletterSection from "@/components/NewsletterSection";
 import AosTemplate from "@/components/AosTemplate";
 
-export const dynamic = "force-dynamic";
-
 const libreBaskerville = Libre_Baskerville({
   subsets: ["latin"],
   weight: ["400", "700"],
