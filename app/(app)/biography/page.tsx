@@ -5,8 +5,6 @@ import Image from "next/image";
 import BodyText from "@/components/BodyText";
 import NewsletterSection from "@/components/NewsletterSection";
 
-export const dynamic = "force-dynamic";
-
 export default async function BiographyPage() {
   const biographyPage = await getBiographyPage();
   const faqPage = await getFaqPage();

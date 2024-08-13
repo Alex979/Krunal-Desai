@@ -1,3 +1,4 @@
+import { revalidatePath } from "next/cache";
 import { GlobalConfig } from "payload";
 
 const FaqPage: GlobalConfig = {
@@ -26,6 +27,13 @@ const FaqPage: GlobalConfig = {
       ],
     },
   ],
+  hooks: {
+    afterChange: [
+      async () => {
+        revalidatePath("/biography");
+      },
+    ],
+  },
 };
 
 export default FaqPage;

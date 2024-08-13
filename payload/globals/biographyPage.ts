@@ -1,3 +1,4 @@
+import { revalidatePath } from "next/cache";
 import { GlobalConfig } from "payload";
 
 const BiographyPage: GlobalConfig = {
@@ -28,10 +29,17 @@ const BiographyPage: GlobalConfig = {
           type: "upload",
           relationTo: "media",
           required: true,
-        }
-      ]
-    }
+        },
+      ],
+    },
   ],
+  hooks: {
+    afterChange: [
+      async () => {
+        revalidatePath("/biography");
+      },
+    ],
+  },
 };
 
 export default BiographyPage;
