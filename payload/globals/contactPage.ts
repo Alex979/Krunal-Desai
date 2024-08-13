@@ -1,3 +1,4 @@
+import { revalidatePath } from "next/cache";
 import { GlobalConfig } from "payload";
 
 const ContactPage: GlobalConfig = {
@@ -8,8 +9,15 @@ const ContactPage: GlobalConfig = {
       type: "upload",
       relationTo: "media",
       required: true,
-    }
+    },
   ],
+  hooks: {
+    afterChange: [
+      async () => {
+        revalidatePath("/contact");
+      },
+    ],
+  },
 };
 
 export default ContactPage;
