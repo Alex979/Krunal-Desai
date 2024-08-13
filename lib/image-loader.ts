@@ -12,9 +12,10 @@ export default function imgixImageLoader(square?: boolean) {
 
 function imgixImageLoaderInternal(src: string, width: number, height?: number | undefined): string {
   const urlSafeSrc = encodeURIComponent(src);
+  width 
   if (height !== undefined) {
     return `https://krunal-desai.imgix.net/${urlSafeSrc}?w=${width}&h=${height}&fit=crop&crop=edges`;
   } else {
-    return `https://krunal-desai.imgix.net/${urlSafeSrc}?w=${width}`;
+    return `https://krunal-desai.imgix.net/${urlSafeSrc}?w=${width}&fit=max`;
   }
 }
