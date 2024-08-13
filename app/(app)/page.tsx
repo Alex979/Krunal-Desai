@@ -187,7 +187,7 @@ export default async function Home() {
           removeBgOnMobile
         >
           <div className="w-full h-full flex items-center justify-end">
-            <div className="w-full xl:w-1/2 flex justify-center">
+            <div className="w-full lg:w-1/2 flex justify-center">
               <div className="w-full md:w-auto m-auto xl:m-0 bg-red-500" data-aos="fade">
                 <div
                   className={
