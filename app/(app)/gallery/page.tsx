@@ -4,10 +4,7 @@ import { getGalleryPage } from "@/lib/globals";
 import { getLocations } from "@/lib/locations";
 import Link from "next/link";
 
-export const dynamic = "force-dynamic";
-
 export default async function GalleryHome() {
-  const locations = await getLocations();
   const galleryPage = await getGalleryPage();
 
   return (

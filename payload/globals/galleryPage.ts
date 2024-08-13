@@ -1,3 +1,4 @@
+import { revalidatePath } from "next/cache";
 import { GlobalConfig } from "payload";
 
 const GalleryPage: GlobalConfig = {
@@ -11,6 +12,13 @@ const GalleryPage: GlobalConfig = {
       required: true,
     },
   ],
+  hooks: {
+    afterChange: [
+      async () => {
+        revalidatePath("/gallery");
+      },
+    ],
+  },
 };
 
 export default GalleryPage;
