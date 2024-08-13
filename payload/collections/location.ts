@@ -1,5 +1,6 @@
 import { CollectionConfig } from "payload";
 import Slug from "../fields/slug";
+import { revalidatePath } from "next/cache";
 
 const Location: CollectionConfig = {
   slug: "locations",
@@ -67,6 +68,13 @@ const Location: CollectionConfig = {
   ],
   admin: {
     useAsTitle: "title",
+  },
+  hooks: {
+    afterChange: [
+      async () => {
+        revalidatePath("/map");
+      },
+    ],
   },
 };
 
