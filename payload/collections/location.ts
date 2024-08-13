@@ -71,8 +71,9 @@ const Location: CollectionConfig = {
   },
   hooks: {
     afterChange: [
-      async () => {
+      async ({ doc }) => {
         revalidatePath("/map");
+        revalidatePath(`/gallery/${doc.slug}`);
       },
     ],
   },
