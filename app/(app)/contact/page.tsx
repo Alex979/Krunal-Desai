@@ -17,8 +17,8 @@ export default async function ContactPage() {
         objectPosition="object-[37%_center]"
         bgClassName="bg-gradient-to-b from-black to-transparent to-20% opacity-50"
       />
-      <div className="w-full flex flex-col justify-center items-center text-slate-600 py-12">
-        <div className="w-full max-w-lg px-16">
+      <div className="w-full flex flex-col justify-center items-center text-slate-600 pt-12 pb-40">
+        <div className="w-full max-w-2xl px-8">
           <ContactForm />
         </div>
       </div>
