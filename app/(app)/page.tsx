@@ -7,7 +7,6 @@ import { getHomePage } from "@/lib/globals";
 import Imgix from "@/components/Imgix";
 import Link from "next/link";
 import BodyText from "@/components/BodyText";
-import InstagramEmbed from "@/components/InstagramEmbed";
 import NewsletterSection from "@/components/NewsletterSection";
 import AosTemplate from "@/components/AosTemplate";
 
@@ -255,17 +254,6 @@ export default async function Home() {
               }
               sizes="100vw"
             />
-          </div>
-        </ImageSection>
-        <ImageSection
-          image={homePage.instagramBackground.featuredImage}
-          noTopPadding
-          variableHeightOnMobile
-          bgClassName=""
-          removeBgOnMobile
-        >
-          <div className="w-full h-full flex items-center justify-center">
-            <InstagramEmbed />
           </div>
         </ImageSection>
         <NewsletterSection />
