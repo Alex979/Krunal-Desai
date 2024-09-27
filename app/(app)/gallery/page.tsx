@@ -22,7 +22,7 @@ export default async function GalleryHome() {
           <ImageSection
             key={locationIndex}
             image={location.featuredImage}
-            priority={locationIndex === 0}
+            priority={locationIndex === 0 || locationIndex === 1}
             halfHeight
             navbar={locationIndex === 0}
             noTopPadding={locationIndex !== 0}
