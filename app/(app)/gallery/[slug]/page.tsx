@@ -1,9 +1,8 @@
 import Link from "next/link";
-import Navbar from "@/components/Navbar";
-import { getLocation, getLocations } from "@/lib/locations";
+import { getLocation } from "@/lib/locations";
 import Imgix from "@/components/Imgix";
 import ImageSection from "@/components/ImageSection";
-import NewsletterSection from "@/components/NewsletterSection";
+import AosTemplate from "@/components/AosTemplate";
 
 export default async function Gallery({
   params,
@@ -45,6 +44,7 @@ export default async function Gallery({
           key={sublocationIndex}
           id={sublocation.slug || undefined}
           className="mx-auto my-2 px-3 md:px-16 lg:px-24 2xl:px-32"
+          data-aos="fade"
         >
           <div className="grid gap-2 grid-cols-1 lg:grid-cols-3 2xl:grid-cols-4">
             <div className="w-full aspect-[3/2] lg:aspect-auto p-[8vw] md:p-[4vw] lg:p-[2.5vw] 2xl:p-[2vw]">
@@ -92,21 +92,23 @@ export default async function Gallery({
   );
 
   return (
-    <main>
-      <ImageSection
-        image={locationData.featuredImage}
-        priority
-        navbar
-        halfHeight
-        bgClassName="bg-gradient-to-b from-black to-transparent to-40% opacity-30"
-      >
-        <div className="w-full h-full flex justify-center items-center text-white p-3">
-          <h1 className="text-5xl md:text-7xl lg:text-8xl 2xl:text-9xl text-center">
-            {locationData.title.toUpperCase()}
-          </h1>
-        </div>
-      </ImageSection>
-      <div className="py-16 space-y-16">{sublocations}</div>
-    </main>
+    <AosTemplate>
+      <main>
+        <ImageSection
+          image={locationData.featuredImage}
+          priority
+          navbar
+          halfHeight
+          bgClassName="bg-gradient-to-b from-black to-transparent to-40% opacity-30"
+        >
+          <div className="w-full h-full flex justify-center items-center text-white p-3">
+            <h1 className="text-5xl md:text-7xl lg:text-8xl 2xl:text-9xl text-center">
+              {locationData.title.toUpperCase()}
+            </h1>
+          </div>
+        </ImageSection>
+        <div className="py-16 space-y-16">{sublocations}</div>
+      </main>
+    </AosTemplate>
   );
 }
