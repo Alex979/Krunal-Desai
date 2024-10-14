@@ -45,10 +45,13 @@ export default function ContactForm() {
         Let&apos;s Chat!
       </h1>
       <BodyText className="text-center">
-        Use the contact form below, or send me an email at{" "}
+        Feel free to reach out! I'm always excited to share more about my
+        photography journey, the places I'm exploring, and the latest shots I've
+        captured. You can use the contact form below or drop me an email at{" "}
         <a className="underline" href="mailto:krunal20079@gmail.com">
           krunal20079@gmail.com
-        </a>
+        </a>{" "}
+        to connect.
       </BodyText>
       <Image
         src={featherIconDark}

@@ -74,13 +74,24 @@ export default async function BiographyPage() {
         bgClassName=""
       ></ImageSection>
       <div className="w-full max-w-3xl mx-auto p-8">
-        <h1 className="text-3xl md:text-4xl font-bold text-center mt-8 mb-16 leading-snug">
+        <h1 className="text-3xl md:text-4xl font-bold text-center mt-8 mb-8 leading-snug">
           Frequently Asked Questions
         </h1>
+        <ul className="text-center mb-8">
+          {faqPage.faqs?.map((faq, index) => {
+            return (
+              <li key={index} className="my-2">
+                <a className="text-sm font-bold underline" href={"#faq-" + index}>
+                  {faq.question}
+                </a>
+              </li>
+            );
+          })}
+        </ul>
         <div className="space-y-16">
           {faqPage.faqs?.map((faq, index) => {
             return (
-              <div key={index}>
+              <div key={index} id={"faq-" + index}>
                 <h1 className="text-2xl md:text-3xl font-bold leading-snug my-4">
                   {faq.question}
                 </h1>
